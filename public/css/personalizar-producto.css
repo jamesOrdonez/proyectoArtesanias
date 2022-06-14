@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: helvetica;
+}
+body {
+    background-color: rgb(245, 209, 125);
+}
+section {
+    margin: 0 auto;
+    padding: 12px;
+    width: 40%;
+    text-align: justify;
+    background-color: white;
+    border-radius: 35px;
+}
+.btn {
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 12px;
+    text-align: center;
+    background-color: rgb(245, 209, 125);
+    font-size: 1em;
+    font-weight: 600;
+}

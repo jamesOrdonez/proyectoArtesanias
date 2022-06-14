@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madera</title>
+</head>
+<body>
+    <header> 
+        <h2 class="head">Artesanías las Américas.co</h2>
+    </header>
+    <section>
+    <h2>Madera</h2>
+    <table>
+       <tr>
+            <th>Nombre</th>
+            <th>descripcion</th>
+            <th>Valor</th>
+            <th>Stock</th>
+            <th>Estado</th>
+            <th>Proveedor</th>
+            <th>Actualizar</th>
+            <th>Eliminar</th>
+       </tr>
+       <% for (let i=0; i<lista.length;i++) { %>
+        <tr>
+           <td><%=lista[i].nombre%></td>
+           <td><%=lista[i].descripcion%></td>
+           <td><%=lista[i].valor%></td>
+           <td><%=lista[i].stock%></td>
+           <td><%=lista[i].estado%></td>
+           <td><%=lista[i].proveedor%></td>
+           <td><a href="/actualizarProducto">Actualizar</a></td>
+           <td><a href="/eliminarProducto">Eliminar</a></td>
+        </tr>
+            <% } %>
+    </table>
+</section>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: helvetica;
+            background-color: #5c4613;
+        }
+        header{
+            margin: 0 auto;
+            background-color: ghostwhite;
+            border-radius: 20px;
+            width: 90%;
+        }
+        .head{
+            text-align: center;
+        }
+        section{
+             background-color: whitesmoke;
+             width: 90%;
+             height: 500px;
+             margin: 0 auto;
+             padding-top: 20px;
+             border-radius: 20px;
+             text-align: center;
+        }
+        table{
+             margin: 0 auto;
+             padding: 15px;
+             border: 3px solid black;
+             border-radius: 15px;
+        }
+        td {
+            padding-left: 15px;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 800;
+            padding: 12px;
+            color: black;
+            border-radius: 30px;
+        }
+    </style>
+</body>
+</html>

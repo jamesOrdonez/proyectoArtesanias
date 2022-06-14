@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/detalleCompra.css">
+    <title>Document</title>
+</head>
+<body>
+    <header> 
+        <h2 class="head">Artesanías las Américas.co</h2>
+    </header>
+    <section>
+    <table>
+        <tr>
+            <th colspan="5"><h2>Detalle de la compra</h2></th>
+        </tr>
+        <tr>
+            <th>Cantidad</th>
+            <th>Precio Unitario</th>
+            <th>Precio total</th>
+            <th>Producto</th>
+            <th>Código de envío</th>
+        </tr>
+        <% for (let i=0; i<lista.length;i++) { %>
+            <tr>
+                <td><%=lista[i].cantidad%></td>
+                <td><%=lista[i].precio_unitario%></td>
+                <td><%=lista[i].total%></td>
+                <td><%=lista[i].fk_prod%></td>
+                <td><%=lista[i].fk_envio%></td>
+            </tr>
+            <% } %>
+    </table>
+</section>
+</body>
+</html>

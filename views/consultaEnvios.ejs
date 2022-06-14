@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de envíos</title>
+</head>
+<body>
+    <header> 
+        <h2 class="head">Artesanías las Américas.co</h2>
+    </header>
+    <section>
+    <table>
+        <tr>
+            <th colspan="6"><h2>Envios</h2></th>
+        </tr>
+        <tr>
+            <th>Codigo de envío</th>
+            <th>Estado</th>
+            <th>Fecha</th>
+            <th>Destinatario</th>
+            <th>Destino</th>
+            <th>Observacion</th>
+        </tr>
+        <% for (let i=0; i<lista.length;i++) { %>
+            <tr>
+                <td><%=lista[i].codigo%></td>
+                <td><%=lista[i].estado%></td>
+                <td><%=lista[i].fecha%></td>
+                <td><%=lista[i].destinatario%></td>
+                <td><%=lista[i].destino%></td>
+                <td><%=lista[i].observacion%></td>
+            </tr>
+            <% } %>
+    </table>
+</section>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: helvetica;
+            background-color: #f5d17d;
+        }
+        header{
+            margin: 0 auto;
+            background-color: ghostwhite;
+            border-radius: 20px;
+            width: 90%;
+        }
+        .head{
+            text-align: center;
+        }
+        section{
+             background-color: whitesmoke;
+             width: 90%;
+             height: 500px;
+             margin: 0 auto;
+             padding-top: 20px;
+             border-radius: 20px;
+             text-align: center;
+        }
+        table{
+             margin: 0 auto;
+             padding: 15px;
+             border: 3px solid black;
+             border-radius: 15px;
+        }
+        td {
+            padding-left: 15px;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 800;
+            padding: 12px;
+            color: black;
+            border-radius: 30px;
+        }
+    </style>
+</body>
+</html>

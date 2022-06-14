@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: helvetica;
+    background-image: url("../img/fondo-madera.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    margin: 0 auto;
+    background-color: rgb(245, 209, 125);
+    border-radius: 20px;
+    width: 90%;
+}
+.head{
+    text-align: center;
+}
+.madera {
+    margin: 10px;
+    font-size: 20px;
+}
+td {
+    margin: 5px;
+}
+input {
+    border-radius: 12px;
+}
+select {
+    border-radius: 12px;
+}
+section{
+background-color: rgb(245, 209, 125);
+width: 90%;
+height: 500px;
+margin: 0 auto;
+padding-top: 20px;
+border-radius: 20px;
+text-align: center;
+}
+table{
+margin: 0 auto;
+padding: 10px;
+}
+.btn {
+background-color: #5c4613;
+color: white;
+font-size: 15px;
+font-weight: 800;
+padding: 9px;
+border-radius: 15px;
+border: 1px solid #adc9c7;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header> 
+        <h2 class="head">Artesanías las Américas.co</h2>
+    </header>
+    <section>
+    <form action="/ingreso_user" method="post">
+        <table>
+            <tr>
+                <h2>Registro de usuarios</h2>
+            </tr>
+            <tr>
+                <td>Tipo de usuario: </td>
+                <td><select name="txttype" required>
+                    <option>Seleccione el tipo de usuario</option>
+                    <option value="comprador">Comprador</option>
+                    <option value="artesano">Artesano</option>
+                    <option value="administrador">Administrador</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Cedula: </td>
+                <td><input type="text" name="txtc" placeholder="Cedula" required></td>
+            </tr>
+            <tr>
+                <td>Nombre: </td>
+                <td><input type="text" name="txtn" placeholder="Nombre" required></td>
+            </tr>
+            <tr>
+                <td>Numero telefónico: </td>
+                <td><input type="text" name="txtnum" placeholder="Numero telefónico" required></td>
+            </tr>
+            <tr>
+                <td>Direccion: </td>
+                <td><input type="text" name="txtd" placeholder="Direccion"></td>
+            </tr>
+            <tr>
+                <td>Correo electrónico: </td>
+                <td><input type="email" name="txtcorreo" placeholder="Correo" required></td>
+            </tr>
+            <tr>
+                <td>Contraseña: </td>
+                <td><input type="password" name="txtpass" placeholder="Contraseña" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Registrar" name="btn1" class="btn"></td>
+            </tr>
+        </table>
+    </form>
+</section> 
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: helvetica;
+            background-color: #f5d17d;
+        }
+        header{
+            margin: 0 auto;
+            background-color: ghostwhite;
+            border-radius: 20px;
+            width: 90%;
+        }
+        .head{
+            text-align: center;
+        }
+        td {
+            margin: 5px;
+        }
+        input {
+            border-radius: 12px;
+        }
+        select {
+            border-radius: 12px;
+        }
+        section{
+        background-color: whitesmoke;
+        width: 90%;
+        height: 500px;
+        margin: 0 auto;
+        padding-top: 20px;
+        border-radius: 20px;
+        text-align: center;
+    }
+    table{
+        margin: 0 auto;
+    }
+    .btn {
+        background-color: #adc9c7;
+        color: white;
+        font-size: 15px;
+        font-weight: 800;
+        padding: 5px;
+        border-radius: 19px;
+        border: 1px solid #adc9c7;
+    }
+    </style>
+</body>
+</html>

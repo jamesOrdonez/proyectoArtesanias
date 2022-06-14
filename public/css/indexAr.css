@@ -1,0 +1,66 @@
+header{
+	margin: 0 auto;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    width: 91%;
+}
+.head{
+    text-align: center;
+}
+body {
+    background-color: rgb(245, 209, 125);
+    margin: 0;
+    padding: 0;
+    font-family: helvetica;
+}
+.content {
+    width: 60%;
+    height: 400px;
+    background-image: url("../img/artesano\ \(2\).jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 31%;
+    margin-top: -33.7%;
+    border-radius: 25px;
+    padding: 30px;
+}
+.menu {
+    width: 20%;
+    height: 400px;
+    background-color: whitesmoke;
+    margin-left: 4.5%;
+    border-radius: 25px;
+    padding: 30px;
+}
+nav {
+    display: block;
+}
+li{
+    border-radius: 7px;
+    padding: 3px;
+    display: block;
+    margin: 15px;
+    width: 500px;
+}
+.img-principal {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+a {
+    list-style: none;
+    text-decoration: none;
+    background-color: #adc9c7;
+    color: black;
+    padding: 8px;
+    border-radius: 15px;
+    font-weight: 550;
+}
+section{
+	background-color: whitesmoke;
+	width: 90%;
+	height: 500px;
+	margin: 0 auto;
+	padding-top: 20px;
+	border-radius: 20px;
+	text-align: center;
+}

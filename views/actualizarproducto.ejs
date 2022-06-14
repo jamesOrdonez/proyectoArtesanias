@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizacion de productos</title>
+</head>
+<body>
+    <header> 
+        <h2 class="head">Artesanías las Américas.co</h2>
+    </header>
+    <section>
+    <form action="/actualizacion_madera" method="post">
+        <table>
+            <tr>
+                <th colspan="2"><h2>Actualizacion de productos</h2></th>
+            </tr>
+            <tr>
+                <td>Nombre del producto: </td>
+                <td><input type="text" name="txtn" placeholder="Nombre del producto" required></td>
+            </tr>
+            <tr>
+                <td>Descripcion: </td>
+                <td><input type="text" name="txtd" placeholder="Descripcion" required></td>
+            </tr>
+            <tr>
+                <td>Valor :</td>
+                <td><input type="number" name="txtv" placeholder="Valor" required></td>
+            </tr>
+            <tr>
+                <td>Stock :</td>
+                <td><input type="number" name="txts" placeholder="Stock" required></td>
+            </tr>  
+            <tr>
+                <td>Proveedor :</td>
+                <td><input type="text" name="txtp" placeholder="Proveedor" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Actualizar" name="btn1" class="btn"></td>
+            </tr>
+        </table>
+    </section>
+    </form>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: helvetica;
+            background-color: whitesmoke;
+        }
+        header{
+            margin: 0 auto;
+            background-color: #f5d17d;
+            border-radius: 20px;
+            width: 90%;
+        }
+        .head{
+            text-align: center;
+        }
+        section{
+             background-color: whitesmoke;
+             width: 90%;
+             height: 500px;
+             margin: 0 auto;
+             padding-top: 20px;
+             border-radius: 20px;
+             text-align: center;
+             border: 1px solid;
+        }
+        table{
+             margin: 0 auto;
+             padding: 15px;
+             border: 3px solid black;
+             border-radius: 15px;
+        }
+        input {
+            border-radius: 12px;
+        }
+        td {
+            padding-left: 15px;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 800;
+            padding: 12px;
+            color: black;
+            border-radius: 30px;
+        }
+        .btn {
+        background-color: #adc9c7;
+        color: white;
+        font-size: 15px;
+        font-weight: 800;
+        padding: 5px;
+        border-radius: 19px;
+        border: 1px solid #adc9c7;
+        }
+    </style>
+</body>
+</html>

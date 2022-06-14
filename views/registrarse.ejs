@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registro de usuarios</title>
+    <link rel="stylesheet" href="/css/registrarse.css">
+</head>
+<body>
+	<header>
+        <h2>Artesanías las Américas</h2>
+	</header><br>
+	<section>
+        <form action="/registro" method="post">
+            <table>
+                <tr>
+                    <h2>Registro de usuarios</h2>
+                </tr>
+                <tr>
+                    <td>Tipo de usuario: </td>
+                    <td><select name="txttype" required>
+                        <option>Seleccione el tipo de usuario</option>
+                        <option value="comprador">Comprador</option>
+                        <option value="artesano">Artesano</option>
+                        <option value="administrador">Administrador</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Cedula: </td>
+                    <td><input type="text" name="txtc" placeholder="Cedula" required></td>
+                </tr>
+                <tr>
+                    <td>Nombre: </td>
+                    <td><input type="text" name="txtn" placeholder="Nombre" required></td>
+                </tr>
+                <tr>
+                    <td>Numero telefónico: </td>
+                    <td><input type="text" name="txtnum" placeholder="Numero telefónico" required></td>
+                </tr>
+                <tr>
+                    <td>Direccion: </td>
+                    <td><input type="text" name="txtd" placeholder="Direccion"></td>
+                </tr>
+                <tr>
+                    <td>Correo electrónico: </td>
+                    <td><input type="email" name="txtcorreo" placeholder="Correo" required></td>
+                </tr>
+                <tr>
+                    <td>Contraseña: </td>
+                    <td><input type="password" name="txtpass" placeholder="Contraseña" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Registrar" name="btn1" class="btn"></td>
+                </tr>
+            </table>
+        </form> 
+	</section>
+</body>
+</html>

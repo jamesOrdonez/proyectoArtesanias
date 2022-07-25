@@ -1,0 +1,159 @@
+  * {
+    margin: 0%;
+    padding: 0%;
+}
+body {
+    background-image: url('../img/arbol.jpg');
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: fixed fixed;
+    background-attachment: fixed;
+    color: white;
+}
+h1 {
+    text-align: left;
+}
+nav{
+    height: calc(100% - 60px);
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    overflow-y: auto;
+    border-top: 1px solid white;
+    transition: all .4s ease-in-out;
+    background-color: rgb(55,30,72);
+}
+ul{
+    list-style: none;
+    display: block;
+    font-size: 1.3em;
+    text-align: left;
+
+}
+li{
+    padding: 0 10px 0 10px;
+}
+a{
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid white;
+    text-decoration: none;
+}
+.fa-house-user{
+    margin-right: 10px;
+}
+.fa-font {
+    margin-right: 10px;
+}
+.fa-palette {
+    margin-right: 10px;
+}
+.fa-list {
+    margin-right: 10px;
+}
+.fa-align-center {
+    margin-right: 10px;
+}
+.fa-images {
+    margin-right: 10px; 
+}
+.fa-table {
+    margin-right: 10px; 
+}
+.fa-wpforms {
+    margin-right: 10px; 
+}
+.fa-box {
+    margin-right: 10px; 
+}
+.fa-arrows-alt {
+    margin-right: 10px; 
+}
+.fa-chevron-down {
+    margin-right: 10px; 
+}
+.fa-icons {
+    margin-right: 10px; 
+}
+.menu-box {
+    position: fixed;
+    top: 0;
+    width: 100px;
+    padding-left: 20px;
+    height: 60px;
+
+}
+#side-header {
+    position: fixed;
+    top :0;
+    width: 220px;
+    height: 100%;
+}
+
+.nav.mostrarNav {
+    left: 0;
+}
+.hamburger-menu {
+    color: blueviolet;
+    font-weight: 900;
+    font-size: 25px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+.conteint-page {
+    display: grid;
+    width: 100%;
+    grid-template: "nav-page","content-page" auto /
+                   300px        auto;
+                   justify-content: start;
+}
+.nav-page {
+    grid-area: nav-page;
+}
+.conteint-page {
+    grid-area: content-page;
+
+}
+li:hover {
+    background-color: black;
+    font-weight: 400;
+    color: white;
+    cursor: pointer;
+}
+.conteint-main {
+    margin: 3em;
+}
+nav.mostrarNav {
+    left: 0;
+}
+
+@media only screen and (max-width:600px) {
+    .bt.menu {
+        width: 120px;
+        overflow-x: hidden;
+    }
+    h1 {
+        margin-top: 60px;
+    }
+    .menu-box-invisible {
+        margin-top: 60px;
+    }
+    nav {
+        width: 100%;
+        position: fixed;
+        right: 100%;
+        font-size: 1.4em;
+        overflow-x: hidden;
+    }
+    ul {
+        width: 98%;
+        overflow-x: hidden;
+    }
+}
+
+
+

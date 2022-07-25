@@ -4,15 +4,16 @@
 	<title>Registro de usuarios</title>
     <link rel="stylesheet" href="/css/registrarse.css">
 </head>
-<body>
-	<header>
-        <h2>Artesanías las Américas</h2>
-	</header><br>
-	<section>
-        <form action="/registro" method="post">
+    <div class="header"> 
+        <img src="/img/logo.png" class="logo">
+        <h2 class="head">Artesanías las Américas.co</h2>
+    </div>
+    <body>
+    <div class="frm">
+        <form action="/registro" method="post" class="formulario">
             <table>
                 <tr>
-                    <h2>Registro de usuarios</h2>
+                    <h2 class="titulo">Registro de usuarios</h2>
                 </tr>
                 <tr>
                     <td>Tipo de usuario: </td>
@@ -37,7 +38,7 @@
                 </tr>
                 <tr>
                     <td>Direccion: </td>
-                    <td><input type="text" name="txtd" placeholder="Direccion"></td>
+                    <td><input type="text" name="txtd" placeholder="Direccion" required></td>
                 </tr>
                 <tr>
                     <td>Correo electrónico: </td>
@@ -48,10 +49,16 @@
                     <td><input type="password" name="txtpass" placeholder="Contraseña" required></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="submit" value="Registrar" name="btn1" class="btn"></td>
+                    <td class="boton"><input type="submit" value="Registrar" name="btn1" class="btn"></td>
                 </tr>
             </table>
         </form> 
-	</section>
+    </div>
+    <div class="footer">
+        <p class="marca">Desarollado por @DevJs32</p>
+        <p class="contactos">Correo: </p>
+        <p class="correo"> Artesanias_Americas@gmail.com</p>
+        <p class="telefono"> WhatsApp: 3223562765</p>
+    </div>
 </body>
 </html>

@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/actualizar-producto.css">
     <title>Actualizacion de productos</title>
 </head>
 <body>
-    <header> 
+    <div class="header"> 
+        <img src="/img/logo.png" class="logo">
         <h2 class="head">Artesanías las Américas.co</h2>
-    </header>
+        <img src="/img/check.png" class="user">
+        <h2 class="texto">Inicio administrador</h2>
+    </div>
     <section>
     <form action="/actualizacion_madera" method="post">
         <table>
@@ -40,64 +44,13 @@
                 <td colspan="2"><input type="submit" value="Actualizar" name="btn1" class="btn"></td>
             </tr>
         </table>
+        </form>
     </section>
-    </form>
-    <style type="text/css">
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: helvetica;
-            background-color: whitesmoke;
-        }
-        header{
-            margin: 0 auto;
-            background-color: #f5d17d;
-            border-radius: 20px;
-            width: 90%;
-        }
-        .head{
-            text-align: center;
-        }
-        section{
-             background-color: whitesmoke;
-             width: 90%;
-             height: 500px;
-             margin: 0 auto;
-             padding-top: 20px;
-             border-radius: 20px;
-             text-align: center;
-             border: 1px solid;
-        }
-        table{
-             margin: 0 auto;
-             padding: 15px;
-             border: 3px solid black;
-             border-radius: 15px;
-        }
-        input {
-            border-radius: 12px;
-        }
-        td {
-            padding-left: 15px;
-            text-align: center;
-        }
-        a {
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: 800;
-            padding: 12px;
-            color: black;
-            border-radius: 30px;
-        }
-        .btn {
-        background-color: #adc9c7;
-        color: white;
-        font-size: 15px;
-        font-weight: 800;
-        padding: 5px;
-        border-radius: 19px;
-        border: 1px solid #adc9c7;
-        }
-    </style>
+    <div class="footer">
+        <p class="marca">Desarollado por @DevJs32</p>
+        <p class="contactos">Correo: </p>
+        <p class="correo"> Artesanias_Americas@gmail.com</p>
+        <p class="telefono"> WhatsApp: 3223562765</p>
+    </div>
 </body>
 </html>

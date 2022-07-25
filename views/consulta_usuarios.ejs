@@ -4,84 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/consulta_usuarios.css">
+    <title>Usuarios registrados</title>
 </head>
 <body>
-    <header> 
+    <div class="content">
+    <div class="header"> 
+        <img src="/img/logo.png" class="logo">
         <h2 class="head">Artesanías las Américas.co</h2>
-    </header>
-    <section>
-        <h2 class="head">Usuarios</h2>
+        <img src="/img/check.png" class="user">
+        <h2 class="texto">Inicio administrador</h2>
+        <div class="buscador">
+            <img src="/img/buscar.png" width="45px" height="45px" class="lupa">
+        </div>
+    </div>
+        <h2 class="title">Usuarios</h2>
     <table>
         <tr>
-            <th>Tipo de usuario</th>
             <th>Cedula</th>
             <th>Nombre</th>
             <th>Numero de teléfono</th>
+            <th>Tipo de usuario</th>
             <th>Direccion</th>
-            <th>Correo electrónico</th>
             <th>Contraseña</th>
             <th>Actualizar</th>
             <th>Eliminar</th>
-        </tr>
-        <% for (let i=0; i<lista.length;i++) { %>
+        </tr>f
+        <% usuario.forEach(usuarios => {
+            %>
             <tr>
-                <td><%=lista[i].tipo_user%></td>
-                <td><%=lista[i].cedula%></td>
-                <td><%=lista[i].nombre%></td>
-                <td><%=lista[i].numero%></td>
-                <td><%=lista[i].direccion%></td>
-                <td><%=lista[i].email%></td>
-                <td><%=lista[i].contraseña%></td>
-                <td><a href="/actualizar_user">Actualizar</a></td>
-                <td><a href="/eliminar_user">Eliminar</a></td>
+                <td><%=usuarios.pk_identificacion%></td>
+                <td><%=usuarios.nombre_user%></td>
+                <td><%=usuarios.telefono_user%></td>
+                <td><%=usuarios.tipo_usuario%></td>
+                <td><%=usuarios.direccion_user%></td>
+                <td><%=usuarios.password%></td>
+                <td><a href="/actualizar_user"><img src="/img/lapiz.png" width="50px" height="50px"></a></td>
+                <td><a href="/eliminar_user"><img src="/img/equis.png" width="50px" height="50px"></a></td>
             </tr>
-            <% } %>
+            <%
+        });
+        %>
     </table>
-</section>
-    <style type="text/css">
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: helvetica;
-            background-color: #f5d17d;
-        }
-        header{
-            margin: 0 auto;
-            background-color: ghostwhite;
-            border-radius: 20px;
-            width: 90%;
-        }
-        .head{
-            text-align: center;
-        }
-        section{
-             background-color: whitesmoke;
-             width: 90%;
-             height: 500px;
-             margin: 0 auto;
-             padding-top: 20px;
-             border-radius: 20px;
-             text-align: center;
-        }
-        table{
-             margin: 0 auto;
-             padding: 15px;
-             border: 3px solid black;
-             border-radius: 15px;
-        }
-        td {
-            padding-left: 15px;
-            text-align: center;
-        }
-        a {
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: 800;
-            padding: 12px;
-            color: black;
-            border-radius: 30px;
-        }
-    </style>
+</div>
+<div class="footer">
+    <p class="marca">Desarollado por @DevJs32</p>
+    <p class="contactos">Correo: </p>
+    <p class="correo"> Artesanias_Americas@gmail.com</p>
+    <p class="telefono"> WhatsApp: 3223562765</p>
+</div>
 </body>
 </html>

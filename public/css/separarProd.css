@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: helvetica;
+    background-color: rgb(59,59,59);
+}
+.header{
+    background-color: rgb(59,59,59) ;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    position: fixed;
+    display: grid;
+    grid-template:"empty     logo    head    user  texto" auto/
+                     60px    140px   280px  60px  300px ;
+} 
+.head{
+    grid-area: head;
+    text-align: center;
+    color: rgb(245, 209, 125);
+}
+.logo {
+    grid-area: logo;
+    width: 132px;
+    height: 82px ;
+    border-radius: 50px;
+    padding: 5px;
+}
+.user {
+    grid-area: user;
+    width: 90%;
+    height: 60%;
+}
+.texto {
+    grid-area: texto;
+    font-size: 19px;
+    font-weight: 700;
+    color: rgb(245, 209, 125);
+}
+section {
+    margin: 0 auto;
+    padding: 12px;
+    width: 40%;
+    text-align: center;
+    background-color: white;
+    border-radius: 35px;
+}
+.btn {
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 12px;
+    text-align: center;
+    background-color: rgb(245, 209, 125);
+    font-size: 1em;
+    font-weight: 600;
+}
+header{
+    margin: 0 auto;
+    background-color: ghostwhite;
+    border-radius: 20px;
+    width: 90%;
+    text-align: center;
+    padding-top: 95px;
+}
+h1 {
+text-align:center ;
+color: white;
+} 
+.boton {
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 8px;
+}
+.footer{
+    background-color: rgb(59,59,59) ;
+    width: 100%;
+    height: 95px;
+    top: 0;
+    left: 0;
+    z-index: 7; 
+    border-top: 3px solid rgb(245, 209, 125);
+    position: relative;
+    display: grid;
+    grid-template:"empty     marca   empty2     contactos  correo    empty3      telefono   empty4" auto/
+                     60px    140px   100px     100px      180px       200px      290px       200px ;
+} 
+.marca {
+    grid-area: marca;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+.contactos {
+    grid-area: contactos;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(245, 209, 125);
+    text-align: center;
+}
+.correo {
+    grid-area: correo;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(245, 209, 125);
+    text-align: center;
+}
+.telefono {
+    grid-area: telefono;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(245, 209, 125);
+    text-align: center;
+} 

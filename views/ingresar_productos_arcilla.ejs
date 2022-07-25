@@ -8,11 +8,14 @@
     <title>Ingreso de productos</title>
 </head>
 <body>
-    <header> 
+    <div class="header"> 
+        <img src="/img/logo.png" class="logo">
         <h2 class="head">Artesanías las Américas.co</h2>
-    </header>
+        <img src="/img/check.png" class="user">
+        <h2 class="texto">Arcilla </h2>
+    </div>
     <section>
-    <form action="/ingreso_prod" method="post">
+    <form action="/ingreso_prod" method="post" class="form-ingreso-prod">
     <table>
         <tr>
             <th colspan="2" class="madera"><h2>Arcilla</h2</th>
@@ -21,7 +24,7 @@
             <td> </td>
         </tr>
         <tr>
-            <td>Nombre del producto: </td>
+            <td>Nombre : </td>
             <td><input type="text" name="txtn" placeholder="Nombre del producto" required></td>
         </tr>
         <tr>
@@ -42,7 +45,6 @@
                 <option>Seleccione el estado</option>
                 <option value="disponible">Disponible</option>
                 <option value="separado">Separado</option>
-                <option value="agotado">Agotado</option>
             </select></td>
         </tr>
         <tr>
@@ -55,5 +57,11 @@
     </table>
 </form>
 </section>
+<div class="footer">
+    <p class="marca">Desarollado por @DevJs32</p>
+    <p class="contactos">Correo: </p>
+    <p class="correo"> Artesanias_Americas@gmail.com</p>
+    <p class="telefono"> WhatsApp: 3223562765</p>
+</div>
 </body>
 </html>

@@ -5,34 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/detalleCompra.css">
-    <title>Document</title>
+    <title>Detalle de la compra</title>
 </head>
 <body>
-    <header> 
+    <div class="header"> 
+        <img src="/img/logo.png" class="logo">
         <h2 class="head">Artesanías las Américas.co</h2>
-    </header>
+        <img src="/img/check.png" class="user">
+        <h2 class="texto">Detalle de la compra </h2>
+        <div class="buscador">
+            <img src="/img/buscar.png" width="45px" height="45px" class="lupa">
+        </div>
+    </div>
     <section>
     <table>
         <tr>
-            <th colspan="5"><h2>Detalle de la compra</h2></th>
+            <h2>Detalle de la compra</h2>
         </tr>
         <tr>
+            <th>Codigo</th>
             <th>Cantidad</th>
-            <th>Precio Unitario</th>
-            <th>Precio total</th>
-            <th>Producto</th>
-            <th>Código de envío</th>
+            <th>Precio unitario</th>
+            <th>Total</th>
+            <th>Código de producto</th>
+            <th>Código de compra</th>
         </tr>
-        <% for (let i=0; i<lista.length;i++) { %>
+        <% detalle_compra.forEach(detalle => {
+            %>
             <tr>
-                <td><%=lista[i].cantidad%></td>
-                <td><%=lista[i].precio_unitario%></td>
-                <td><%=lista[i].total%></td>
-                <td><%=lista[i].fk_prod%></td>
-                <td><%=lista[i].fk_envio%></td>
+                <td><%=detalle.pk_id_detalle%></td>
+                <td><%=detalle.cantidad%></td>
+                <td><%=detalle.precio_unitario%></td>
+                <td><%=detalle.total%></td>
+                <td><%=detalle.fk_pdto%></td>
+                <td><%=detalle.fk_compra%></td>
             </tr>
-            <% } %>
+            <% }); %>
     </table>
 </section>
+<div class="footer">
+    <p class="marca">Desarollado por @DevJs32</p>
+    <p class="contactos">Correo: </p>
+    <p class="correo"> Artesanias_Americas@gmail.com</p>
+    <p class="telefono"> WhatsApp: 3223562765</p>
+</div>
 </body>
 </html>

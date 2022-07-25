@@ -4,43 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/consultaPiedraComprador.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/consultaArcillaComprador.css">
+    <title>Arcilla</title>
 </head>
 <body>
-    <header> 
+    <div class="header"> 
+        <img src="/img/logo.png" class="logo">
         <h2 class="head">Artesanías las Américas.co</h2>
-    </header>
-    <h1>Piedra</h1>
-    <% for (let i=0; i<lista.length;i++) { %>
-    <div>
-        <p class="nombre_producto"><%=lista[i].nombre%></p>
-     <div class="img"></div>
+        <img src="/img/check.png" class="user">
+        <h2 class="texto">Piedra </h2>
+        <div class="buscador">
+            <img src="/img/buscar.png" width="45px" height="45px" class="lupa">
+        </div>
+    </div>
+    <% producto.forEach(productos => {
+        %>
+    <div class="pdto">
+        <p class="nombre_producto"><%=productos.nombre_pdto%></p>
+     <div class="img"><img src="/img/estatua2.jpg" width="240px" height="170px" class="mesa"></div>
         <table>
             <tr>
-                <td>Descripcion :</td>
-                <td><%=lista[i].descripcion%></td>
+                <td class="encabezado">Descripcion :</td>
+                <td><%=productos.desc_pdto%></td>
             </tr>
             <tr>
-                <td>Stock :</td>
-                <td><%=lista[i].stock%> unidades</td>
+                <td class="encabezado">Stock :</td>
+                <td><%=productos.stock%> unidades</td>
             </tr>
             <tr>
-                <td>Estado :</td>
-                <td><%=lista[i].estado%></td>
+                <td class="encabezado">Estado :</td>
+                <td><%=productos.estado%></td>
             </tr>
             <tr>
-                <td>Proveedor :</td>
-                <td><%=lista[i].proveedor%></td>
+                <td class="encabezado">Proveedor :</td>
+                <td><%=productos.proveedor%></td>
             </tr>
         </table>
-        <p class="precios">$<%=lista[i].valor%></p>
+        <p class="precios">$<%=productos.valor_pdto%></p>
               <tr>
                  <td><a href="#">Agregar al carrito</a></td>
-                 <td><a href="#">Separar</a></td>
+                 <td><a href="/separarProducto">Separar</a></td>
                  <td><a href="/personalizarPiedra">Personalizar</a></td>
              </tr>
     </div>
-    <% } %>
+    <% }); %>
+    <div class="footer">
+        <p class="marca">Desarollado por @DevJs32</p>
+        <p class="contactos">Correo: </p>
+        <p class="correo"> Artesanias_Americas@gmail.com</p>
+        <p class="telefono"> WhatsApp: 3223562765</p>
+    </div>
 </body>
 </html>

@@ -1,58 +1,118 @@
     .header{
-    background-color: rgb(245, 209, 125);
+    background-color: rgb(59,59,59) ;
     width: 100%;
-    height: 80px;
+    height: 95px;
     top: 0;
     left: 0;
+    z-index: 8;
     position: fixed;
     display: grid;
-    grid-template:"empty     logo     empty2     head    empty3" auto/
-                     60px    400px   100px      200px      1fr ;
+    grid-template:"empty     logo    head   empty2     registro   empty3     ingresar   empty4       " auto/
+                     60px    140px   280px   100px       100px      30px      100px       9fr ;
 } 
 .head{
     grid-area: head;
     text-align: center;
+    color: rgb(245, 209, 125);
 }
 .logo {
     grid-area: logo;
     width: 132px;
     height: 82px ;
-    border-radius: 40px;
+    border-radius: 50px;
+    padding: 5px;
+}
+.registro {
+    grid-area: registro;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    border-radius: 25px;
+    padding: 12px;
+    display: inline;
+    margin: 15px;
+    border: 1px solid transparent;
+    width: 70%;
+    height: 30%;
+    background-color: green;
+}
+.ingresar {
+    grid-area: ingresar;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    border-radius: 25px;
+    padding: 12px;
+    display: inline;
+    margin: 15px;
+    border: 1px solid transparent;
+    width: 70%;
+    height: 30%;
+    background-color: green;
+}
+.ingresar:hover {
+    background-color: gray;
+    color: whitesmoke;
+    float: initial;
+}
+.registro:hover {
+    background-color: gray;
+    color: whitesmoke;
 }
 body {
-    background-image: url("../img/artesania18.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
     margin: 0;
     padding: 0;
     font-family: helvetica;
 }
-nav {
-    top: 800px;
-    text-align: center;
-    justify-content: bottom;
+.content {
+    position: relative;
+    z-index: 6;
 }
-li{
-    border-radius: 18px;
-    padding: 8px;
-    display: inline;
-    margin: 15px;
-    background-color: rgb(245, 209, 125);
+.img-principal {
+    width: 100%;
+    padding-top: 80px;
+}
+.footer{
+    background-color: rgb(59,59,59) ;
+    width: 100%;
+    height: 95px;
+    top: 0;
+    left: 0;
+    z-index: 7; 
+    border-top: 3px solid rgb(245, 209, 125);
+    position: relative;
+    display: grid;
+    grid-template:"empty     marca   empty2     contactos  correo    empty3      telefono   empty4" auto/
+                     60px    140px   100px     100px      180px       200px      290px       200px ;
+} 
+.marca {
+    grid-area: marca;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+.contactos {
+    grid-area: contactos;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(245, 209, 125);
+    text-align: center;
+}
+.correo {
+    grid-area: correo;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(245, 209, 125);
+    text-align: center;
+}
+.telefono {
+    grid-area: telefono;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(245, 209, 125);
+    text-align: center;
 }
 
-a {
-    list-style: none;
-    text-decoration: none;
-    background-color: rgb(245, 209, 125);
-    color: black;
-    font-weight: 700;
-}
-section{
-    background-color: rgb(255, 255,255,.6);
-	width: 90%;
-    margin: 200px auto;
-	height: 100px;
-	padding-top: 20px;
-	border-radius: 20px;
-	text-align: center;
-}

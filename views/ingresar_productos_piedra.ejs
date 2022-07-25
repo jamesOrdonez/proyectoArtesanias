@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/ingresar_piedra.css">
     <title>Ingreso de productos</title>
 </head>
 <body>
-    <header> 
+    <div class="header"> 
+        <img src="/img/logo.png" class="logo">
         <h2 class="head">Artesanías las Américas.co</h2>
-    </header>
+        <img src="/img/check.png" class="user">
+        <h2 class="texto">Piedra </h2>
+    </div>
     <section>
-    <form action="/ingreso_prod" method="post">
+    <form action="/ingreso_prod" method="post" class="form-ingreso-prod">
     <table>
         <tr>
             <th colspan="2" class="madera"><h2>Piedra</h2</th>
@@ -20,7 +24,7 @@
             <td> </td>
         </tr>
         <tr>
-            <td>Nombre del producto: </td>
+            <td>Nombre : </td>
             <td><input type="text" name="txtn" placeholder="Nombre del producto" required></td>
         </tr>
         <tr>
@@ -41,7 +45,6 @@
                 <option>Seleccione el estado</option>
                 <option value="disponible">Disponible</option>
                 <option value="separado">Separado</option>
-                <option value="agotado">Agotado</option>
             </select></td>
         </tr>
         <tr>
@@ -54,57 +57,11 @@
     </table>
 </form>
 </section>
-<style type="text/css">
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: helvetica;
-        background-color: gray;
-    }
-    header{
-        margin: 0 auto;
-        background-color: ghostwhite;
-        border-radius: 20px;
-        width: 90%;
-    }
-    .head{
-        text-align: center;
-    }
-    .madera {
-        margin: 10px;
-        font-size: 20px;
-    }
-    td {
-        margin: 5px;
-    }
-    input {
-        border-radius: 12px;
-    }
-    select {
-        border-radius: 12px;
-    }
-    section{
-    background-color: whitesmoke;
-    width: 90%;
-    height: 500px;
-    margin: 0 auto;
-    padding-top: 20px;
-    border-radius: 20px;
-    text-align: center;
-}
-table{
-    margin: 0 auto;
-    padding: 10px;
-}
-.btn {
-    background-color: gray;
-    color: white;
-    font-size: 15px;
-    font-weight: 800;
-    padding: 9px;
-    border-radius: 15px;
-    border: 1px solid #adc9c7;
-}
-</style>
+<div class="footer">
+    <p class="marca">Desarollado por @DevJs32</p>
+    <p class="contactos">Correo: </p>
+    <p class="correo"> Artesanias_Americas@gmail.com</p>
+    <p class="telefono"> WhatsApp: 3223562765</p>
+</div>
 </body>
 </html>

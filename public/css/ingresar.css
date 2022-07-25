@@ -2,18 +2,39 @@ body {
     margin: 0;
     padding: 0;
     font-family: helvetica;
-    background-color: #f5d17d;
+    background-color: rgb(59,59,59);
 }
-header{
-    margin: 0 auto;
-    background-color: ghostwhite;
-    border-radius: 20px;
-    width: 90%;
-}
+.header{
+    background-color: rgb(59,59,59) ;
+    width: 100%;
+    height: 95px;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    position: fixed;
+    display: grid;
+    grid-template:"empty     logo    head   empty2     registro   empty3     ingresar   empty4       " auto/
+                     60px    140px   280px   100px       100px      30px      100px       9fr ;
+} 
 .head{
+    grid-area: head;
     text-align: center;
+    color: rgb(245, 209, 125);
+}
+.logo {
+    grid-area: logo;
+    width: 132px;
+    height: 82px ;
+    border-radius: 50px;
+    padding: 5px;
+}
+.titulo {
+    color: black;
 }
 td {
+    color: black    ;
+    font-size: 17px;
+    font-weight: 700;
     margin: 5px;
 }
 input {
@@ -23,13 +44,10 @@ select {
     border-radius: 12px;
 }
 section{
-background-image: url("../img/artesaniabarro.jpg");
-background-size: cover;
-background-repeat: no-repeat;
 width: 90%;
-height: 500px;
+height: 450px;
 margin: 0 auto;
-padding-top: 20px;
+padding-top: 95px;
 border-radius: 20px;
 text-align: center;
 justify-content: center;
@@ -38,18 +56,66 @@ table{
 margin: 0 auto;
 }
 .btn {
-background-color: #adc9c7;
+background-color: green;
 color: white;
 font-size: 15px;
 font-weight: 800;
 padding: 5px;
+border: 1px solid transparent;
 border-radius: 19px;
-border: 1px solid #adc9c7;
 }
 form {
-    background-color: rgb(255, 255, 255, .5);
-    width: 40%;
-    height: 50%;
-    border-radius: 20px;
-    margin: 90px auto;
+    border: 5px solid green;
+    border-radius: 42px;
+    background-color: gray;
+    padding: 3px;
+    width: 30%;
+    margin: 0 auto;
+}
+select:hover {
+    border: 2px solid rgb(245, 209, 125);
+}
+input:hover {
+    border: 2px solid rgb(245, 209, 125);
+}
+.footer{
+    background-color: rgb(59,59,59) ;
+    width: 100%;
+    height: 85px;
+    top: 0;
+    left: 0;
+    z-index: 7; 
+    position: relative;
+    border-top: 2px solid rgb(245, 209, 125);
+    display: grid;
+    grid-template:"empty     marca   empty2     contactos  correo    empty3      telefono   empty4" auto/
+                     60px    140px   100px     100px      180px       200px      290px       200px ;
+} 
+.marca {
+    grid-area: marca;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+.contactos {
+    grid-area: contactos;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(245, 209, 125);
+    text-align: center;
+}
+.correo {
+    grid-area: correo;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(245, 209, 125);
+    text-align: center;
+}
+.telefono {
+    grid-area: telefono;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(245, 209, 125);
+    text-align: center;
 }

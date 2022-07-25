@@ -4,84 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/consulta_compras.css">
+    <title>Compras</title>
 </head>
 <body>
-    <header> 
+    <div class="header"> 
+        <img src="/img/logo.png" class="logo">
         <h2 class="head">Artesanías las Américas.co</h2>
-    </header>
-    <section>
+        <img src="/img/check.png" class="user">
+        <h2 class="texto">Compras </h2>
+        <div class="buscador">
+            <img src="/img/buscar.png" width="45px" height="45px" class="lupa">
+        </div>
+    </div>
     <table>
         <tr>
-            <th colspan="7"><h2>Compras registradas</h2></th>
+            <h2 class="title">Compras registradas</h2>
         </tr>
         <tr>
-            <th>Fecha</th>
-            <th>Valor</th>
-            <th>Forma de pago</th>
-            <th>Abono</th>
-            <th>Pendiente</th>
-            <th>Código de envío</th>
-            <th>Usuario</th>
-            <th>Detalle de compra</th>
+             <th>Codigo</th>
+             <th>Fecha</th>
+             <th>Valor</th>
+             <th>Forma de pago</th>
+             <th>Abono</th>
+             <th>Pendiente</th>
+             <th>Codigo de envio</th>
+             <th>Codigo de usuario</th>
+             <th>Detalle</th>
         </tr>
-        <% for (let i=0; i<lista.length;i++) { %>
-            <tr>
-                <td><%=lista[i].fecha%></td>
-                <td><%=lista[i].valor%></td>
-                <td><%=lista[i].forma_pago%></td>
-                <td><%=lista[i].abono%></td>
-                <td><%=lista[i].pendiente%></td>
-                <td><%=lista[i].fk_envio%></td>
-                <td><%=lista[i].fk_usuario%></td>
-                <td><a href="/detalle_compra">Ver detalle</a></td>
-            </tr>
-            <% } %>
-    </table>
-</section>
-    <style type="text/css">
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: helvetica;
-            background-color: #f5d17d;
-        }
-        header{
-            margin: 0 auto;
-            background-color: ghostwhite;
-            border-radius: 20px;
-            width: 90%;
-        }
-        .head{
-            text-align: center;
-        }
-        section{
-             background-color: whitesmoke;
-             width: 90%;
-             height: 500px;
-             margin: 0 auto;
-             padding-top: 20px;
-             border-radius: 20px;
-             text-align: center;
-        }
-        table{
-             margin: 0 auto;
-             padding: 15px;
-             border: 3px solid black;
-             border-radius: 15px;
-        }
-        td {
-            padding-left: 15px;
-            text-align: center;
-        }
-        a {
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: 800;
-            padding: 12px;
-            color: black;
-            border-radius: 30px;
-        }
-    </style>
+        <% compra.forEach(compras => {
+         %>
+         <tr>
+            <td><%=compras.pk_codigo_compra%></td>
+            <td><%=compras.fecha_compra%></td>
+            <td><%=compras.valor_compra%></td>
+            <td><%=compras.forma_pago%></td>
+            <td><%=compras.abono%></td>
+            <td><%=compras.pendiente%></td>
+            <td><%=compras.fk_envio %></td>
+            <td><%=compras.fk_usuario %></td>
+            <td><a href="/detalle_compra">Ver detalle</a></td>
+         </tr>
+             <% 
+         });
+          %>
+     </table>
+<div class="footer">
+    <p class="marca">Desarollado por @DevJs32</p>
+    <p class="contactos">Correo: </p>
+    <p class="correo"> Artesanias_Americas@gmail.com</p>
+    <p class="telefono"> WhatsApp: 3223562765</p>
+</div>
 </body>
 </html>

@@ -4,89 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/perfilArtesano.css">
     <title>Perfil</title>
 </head>
 <body>
-    <header> 
+    <div class="header"> 
+        <img src="/img/logo.png" class="logo">
         <h2 class="head">Artesanías las Américas.co</h2>
-    </header>
-    <section>
+        <img src="/img/check.png" class="user">
+        <h2 class="texto">Inicio artesano</h2>
+    </div>
+    <div class="tabla">
     <table>
         <tr>
-            <th colspan="6"><h2>Perfil</h2></th>
+           <h2 class="title">Perfil</h2>
         </tr>
-        <% for (let i=0; i<lista.length;i++) { %>
+        <% artesano.forEach (artesano => {
+            %>
         <tr>
-            <th>Cedula</th>
-            <td><%=lista[i].identificacion%></td>
+            <th>Identificacion</th>
+            <td><%=artesano.pk_identificacion%></td>
         </tr>
-        <tr> 
+        <tr>
             <th>Nombre</th>
-            <td><%=lista[i].nombre%></td>
-
+            <td><%=artesano.nombre_user%></td>
         </tr>
         <tr>
             <th>Telefono</th>
-            <td><%=lista[i].telefono%></td>
+            <td><%=artesano.telefono_user%></td>
         </tr>
-        <tr>
-            <th>Tipo de usuario</th>
-            <td><%=lista[i].tipo_user%></td>
-        </tr>
-        <tr>
+        <tr> 
             <th>Direccion</th>
-            <td><%=lista[i].direccion%></td>
+            <td><%=artesano.direccion_user%></td>
+
         </tr>
         <tr>
             <th>Contraseña</th>
-            <td><%=lista[i].contraseña%></td>
+            <td><%=artesano.password%></td>
         </tr>
-            <% } %>
+                <% 
+            });
+             %>
         <tr>
             <td colspan="2"><a href="/actualizar_artesano">Actualizar</a></td>
         </tr>
     </table>
-</section>
-    <style type="text/css">
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: helvetica;
-            background-color: #f5d17d;
-        }
-        header{
-            margin: 0 auto;
-            background-color: ghostwhite;
-            border-radius: 20px;
-            width: 90%;
-        }
-        .head{
-            text-align: center;
-        }
-        section{
-             background-color: whitesmoke;
-             width: 90%;
-             height: 500px;
-             margin: 0 auto;
-             padding-top: 20px;
-             border-radius: 20px;
-             text-align: center;
-        }
-        table{
-             margin: 0 auto;
-             border: 3px solid black;
-             border-radius: 40px;
-             padding: 15px;
-        }
-        a {
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: 800;
-            padding: 12px;
-            color: black;
-            border-radius: 30px;
-            margin: 15px;
-        }
-    </style>
+</div>
+    <div class="footer">
+        <p class="marca">Desarollado por @DevJs32</p>
+        <p class="contactos">Correo: </p>
+        <p class="correo"> Artesanias_Americas@gmail.com</p>
+        <p class="telefono"> WhatsApp: 3223562765</p>
+    </div>
 </body>
 </html>

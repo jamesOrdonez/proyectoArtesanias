@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/consulta_arcilla.css">
     <title>Arcilla</title>
 </head>
 <body>
-    <header> 
+    <div class="header"> 
+        <img src="/img/logo.png" class="logo">
         <h2 class="head">Artesanías las Américas.co</h2>
-    </header>
-    <section>
-    <h2>Arcilla</h2>
+        <img src="/img/check.png" class="user">
+        <h2 class="texto">Arcilla </h2>
+        <div class="buscador">
+            <img src="/img/buscar.png" width="45px" height="45px" class="lupa">
+        </div>
+    </div>
+    <h2 class="title">Arcilla</h2>
     <table>
        <tr>
+            <th>Codigo</th>
             <th>Nombre</th>
             <th>descripcion</th>
             <th>Valor</th>
@@ -23,63 +30,28 @@
             <th>Actualizar</th>
             <th>Eliminar</th>
        </tr>
-       <% for (let i=0; i<lista.length;i++) { %>
+       <% producto.forEach(productos => {
+        %>
         <tr>
-           <td><%=lista[i].nombre%></td>
-           <td><%=lista[i].descripcion%></td>
-           <td><%=lista[i].valor%></td>
-           <td><%=lista[i].stock%></td>
-           <td><%=lista[i].estado%></td>
-           <td><%=lista[i].proveedor%></td>
-           <td><a href="/actualizarProducto">Actualizar</a></td>
-           <td><a href="/eliminarProducto">Eliminar</a></td>
+           <td><%=productos.pk_codigo_pdto%></td>
+           <td><%=productos.nombre_pdto%></td>
+           <td><%=productos.desc_pdto%></td>
+           <td><%=productos.valor_pdto%></td>
+           <td><%=productos.stock%></td>
+           <td><%=productos.estado%></td>
+           <td><%=productos.proveedor%></td>
+           <td><a href="/actualizarProducto"><img src="/img/lapiz.png" width="50px" height="50px"></a></td>
+           <td><a href="/eliminarProducto"><img src="/img/equis.png" width="50px" height="50px"></a></td>
         </tr>
-            <% } %>
+            <% 
+        });
+         %>
     </table>
-</section>
-    <style type="text/css">
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: helvetica;
-            background-color: #f5d17d;
-        }
-        header{
-            margin: 0 auto;
-            background-color: ghostwhite;
-            border-radius: 20px;
-            width: 90%;
-        }
-        .head{
-            text-align: center;
-        }
-        section{
-             background-color: whitesmoke;
-             width: 90%;
-             height: 500px;
-             margin: 0 auto;
-             padding-top: 20px;
-             border-radius: 20px;
-             text-align: center;
-        }
-        table{
-             margin: 0 auto;
-             padding: 15px;
-             border: 3px solid black;
-             border-radius: 15px;
-        }
-        td {
-            padding-left: 15px;
-            text-align: center;
-        }
-        a {
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: 800;
-            padding: 12px;
-            color: black;
-            border-radius: 30px;
-        }
-    </style>
+<div class="footer">
+    <p class="marca">Desarollado por @DevJs32</p>
+    <p class="contactos">Correo: </p>
+    <p class="correo"> Artesanias_Americas@gmail.com</p>
+    <p class="telefono"> WhatsApp: 3223562765</p>
+</div>
 </body>
 </html>

@@ -46,17 +46,6 @@ body {
     margin: 10px;
     font-size: 20px;
 }
-td {
-    margin: 5px;
-    font-size: 16px;
-    font-weight: 700;
-}
-input {
-    border-radius: 12px;
-}
-select {
-    border-radius: 12px;
-}
 section{
 background-color: rgb(59,59,59);
 width: 90%;
@@ -66,26 +55,12 @@ padding-top: 100px;
 border-radius: 20px;
 text-align: center;
 }
-.form-ingreso-prod {
-    border: 5px solid green;
-    border-radius: 42px;
-    background-color: gray;
-    padding: 3px;
-    width: 30%;
-    margin: 0 auto;
+form {
+    background-color: rgb(59,59,59);
 }
 table{
 margin: 0 auto;
 padding: 10px;
-}
-.btn {
-background-color: green;
-color: white;
-font-size: 15px;
-font-weight: 800;
-padding: 9px;
-border-radius: 15px;
-border: 1px solid transparent;
 }
 .footer{
     background-color: rgb(59,59,59) ;

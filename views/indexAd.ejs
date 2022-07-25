@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/indexAd.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/'-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="styles.css">
     <title>Inicio administrador</title>
 </head>
 <body>
@@ -16,21 +18,27 @@
     </div>
     <br>
     <div class="main-content">
-        <nav class="nav">
-            <ul>
-                <li><a href="/ingresa_prod">Ingresar productos</a></li>
-                <li><a href="/ingresa_user">Ingresar usuarios</a></li>
-                <li><a href="/ingresa_catalogo">Ingresar catálogo</a></li>
-                <li><a href="/consulta_prod">Consultar productos</a></li>
-                <li><a href="/consulta_user">Consultar usuarios</a></li>
-                <li><a href="/consulta_compras">Consultar compras</a></li>
-                <li><a href="/consulta_envios">Consultar envios</a></li>
-                <li><a href="#">Facturacion</a></li>
-                <li><a href="#">Reportes</a></li>
-                <li><a href="/salir">Salir</a></li>
-            </ul>
-        </nav>
-        <img src="/img/artesania12.jpeg" class="img">
+        <header class="main-header">
+            <nav id="nav" class="main-nav">
+              <div class="nav-links">
+                <a class="link-item" href="/ingresa_prod">Ingresar productos</a>
+                <a class="link-item" href="/ingresa_user">Ingresar usuarios</a>
+                <a class="link-item" href="/ingresa_catalogo">Ingresar catálogo</a>
+                <a class="link-item" href="/consulta_prod">Consultar productos</a>
+                <a class="link-item" href="/consulta_user">Consultar usuarios</a></a>
+                <a class="link-item" href="/consulta_compras">Consultar compras</a></a>
+                <a class="link-item" href="/consulta_envios">Consultar envios</a>
+                <a class="link-item" href="#">Facturacion</a>
+                <a class="link-item" href="#">Reportes</a>
+                <a class="link-item" href="/salir">Salir</a></a>
+              </div>
+            </nav>
+            <button id="button-menu" class="button-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </header><br>
 </div>
     <div class="footer">
         <p class="marca">Desarollado por @DevJs32</p>
@@ -38,5 +46,6 @@
         <p class="correo"> Artesanias_Americas@gmail.com</p>
         <p class="telefono"> WhatsApp: 3223562765</p>
     </div>
+    <script src="/js/script.js"></script>
 </body>
 </html>

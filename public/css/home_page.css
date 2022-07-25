@@ -35,7 +35,7 @@
     border: 1px solid transparent;
     width: 70%;
     height: 30%;
-    background-color: green;
+    background-color: gray;
 }
 .ingresar {
     grid-area: ingresar;
@@ -50,12 +50,7 @@
     border: 1px solid transparent;
     width: 70%;
     height: 30%;
-    background-color: green;
-}
-.ingresar:hover {
-    background-color: gray;
-    color: whitesmoke;
-    float: initial;
+    background-color: rgb(245, 209, 125);
 }
 .registro:hover {
     background-color: gray;

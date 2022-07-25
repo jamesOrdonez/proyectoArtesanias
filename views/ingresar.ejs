@@ -12,36 +12,43 @@
         <img src="/img/logo.png" class="logo">
         <h2 class="head">Artesanías las Américas.co</h2>
     </div>
-    <section>
-    <form action="/ingreso" method="post">
-        <table>
-            <tr>
-                <th colspan="2"><h2 class="titulo">Ingreso de usuarios</h2></th>
-            </tr>
-            <tr>
-                <td>Tipo de usuario: </td>
-                <td><select name="txttype" required>
-                    <option>Seleccione el tipo de usuario</option>
-                    <option value="comprador">Comprador</option>
-                    <option value="artesano">Artesano</option>
-                    <option value="administrador">Administrador</option>
-                </select></td>
-            </tr>
-            <tr>
-                <td>Cedula: </td>
-                <td><input type="text" name="txtc" placeholder="cedula" required></td>
-            </tr>
-            <tr>
-                <td>Contraseña: </td>
-                <td><input type="password" name="txtpass" placeholder="contraseña" required></td>
-            </tr>
-            <tr>
-                <br>
-                <td colspan="2"><input type="submit" value="Ingresar" name="btn2" class="btn"></td>
-            </tr>
-        </table>
-    </form><br><br><br>
-</section>
+    <div class="container">
+        <div class="screen">
+            <div class="screen__content">
+                <form class="login" action="/ingreso" method="post">
+                    <div class="login__field">
+                        <tr>
+                            <td>Tipo de usuario: </td>
+                            <select name="txttype" required>
+                                <option>Seleccione el tipo de usuario</option>
+                                <option value="comprador">Comprador</option>
+                                <option value="artesano">Artesano</option>
+                                <option value="administrador">Administrador</option>
+                            </select>
+                        </tr>
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="text" class="login__input" placeholder="Identificacion" required>
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="password" class="login__input" placeholder="Contraseña" required>
+                    </div>
+                    <button class="button login__submit">
+                        <span class="button__text"> Ingresar </span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>				
+                </form>
+            </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>		
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>		
+        </div>
+    </div>
 <div class="footer">
     <p class="marca">Desarollado por @DevJs32</p>
     <p class="contactos">Correo: </p>

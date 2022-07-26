@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/ingresar_catalogo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Registro de catálogos</title>
 </head><br>
 <body>
@@ -14,22 +15,26 @@
         <img src="/img/check.png" class="user">
         <h2 class="texto">Inicio administrador</h2>
     </div>
-    <section class="form">
-    <form action="/ingreso_catalogo" method="post" class="formulario">
-        <table>
-        <tr>
-            <th colspan="2"><h2>Registrar un catalogo</h2></th>
-        </tr>
-        <tr>
-            <td>Nombre del catálogo: </td>
-            <td><input type="text" name="txtn"></td>
-        </tr>
-        <tr>
-            <td colspan="2"><input type="submit" value="Registrar" class="btn"></td>
-        </tr>
-        </table>
-    </form>
-</section>
+    <div class="form-body">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Registro de catalogos</h3>
+                    <form class="requires-validation" method="post" action="/ingreso_catalogo">
+                        <div class="col-md-12">
+                           <input class="form-control" type="text" name="name" placeholder=" Nombre del catalogo." required>
+                           <div class="valid-feedback">Su nombre es válido!!</div>
+                           <div class="invalid-feedback">Nombre inválido!</div>
+                        </div>
+                        <div class="form-button mt-3">
+                            <button id="submit" type="submit" class="btn btn-success">Registrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="footer">
     <p class="marca">Desarollado por @DevJs32</p>
     <p class="contactos">Correo: </p>

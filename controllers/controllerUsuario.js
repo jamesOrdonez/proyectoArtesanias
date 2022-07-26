@@ -10,6 +10,9 @@ controlador.mostrarIngresoUser=(req,res)=>{
 controlador.devolverIndex=(req,res)=>{
     res.render('indexAd.ejs');
 }
+controlador.devolverAdmin=(req,res)=>{
+    res.render('indexAd.ejs');
+}
 /* registro por primera vez */
 controlador.mostrarRegistro=(req,res)=>{
     res.render('registrarse.ejs');

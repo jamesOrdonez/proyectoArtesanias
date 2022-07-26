@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/ingresar_arcilla.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Ingreso de productos</title>
 </head>
 <body>
@@ -14,49 +15,46 @@
         <img src="/img/check.png" class="user">
         <h2 class="texto">Arcilla </h2>
     </div>
-    <section>
-    <form action="/ingreso_prod" method="post" class="form-ingreso-prod">
-    <table>
-        <tr>
-            <th colspan="2" class="madera"><h2>Arcilla</h2</th>
-        </tr>
-        <tr>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>Nombre : </td>
-            <td><input type="text" name="txtn" placeholder="Nombre del producto" required></td>
-        </tr>
-        <tr>
-            <td>Descripcion: </td>
-            <td><input type="text" name="txtd" placeholder="Descripcion" required></td>
-        </tr>
-        <tr>
-            <td>Valor :</td>
-            <td><input type="number" name="txtv" placeholder="Valor" required></td>
-        </tr>
-        <tr>
-            <td>Stock :</td>
-            <td><input type="number" name="txts" placeholder="Stock" required></td>
-        </tr>  
-        <tr>
-            <td>Estado :</td>
-            <td><select name="txte">
-                <option>Seleccione el estado</option>
-                <option value="disponible">Disponible</option>
-                <option value="separado">Separado</option>
-            </select></td>
-        </tr>
-        <tr>
-            <td>Proveedor :</td>
-            <td><input type="text" name="txtp" placeholder="Proveedor" required></td>
-        </tr>
-        <tr>
-            <td colspan="2"><input type="submit" value="Registrar" name="btn1" class="btn"></td>
-        </tr>
-    </table>
-</form>
-</section>
+    <div class="form-body">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Registro de productos </h3>
+                    <form class="requires-validation" method="post" action="/ingreso_prod">
+                       <div class="col-md-12">
+                        <input class="form-control" type="text" name="nombre-prod" placeholder="Nombre del producto." required>
+                        <div class="valid-feedback"> Nombre válido!</div>
+                        <div class="invalid-feedback"> Nombre invalido!</div>
+                     </div>
+                        <div class="col-md-12">
+                           <input class="form-control" type="text" name="desc-prod" placeholder="Descripcion" required>
+                           <div class="valid-feedback">Su nombre es válido!!</div>
+                           <div class="invalid-feedback">Nombre inválido!</div>
+                        </div><br>
+                        <div class="col-md-12">
+                            <input class="form-control" type="number" name="valor-prod" placeholder="Valor " required>
+                            <div class="valid-feedback">Numero correcto!</div>
+                            <div class="invalid-feedback">Numero erróneo!</div>
+                         </div><br>
+                        <div class="col-md-12">
+                            <input class="form-control" type="number" name="stock-prod" placeholder="Stock. " required>
+                             <div class="valid-feedback">Stock correcta!</div>
+                             <div class="invalid-feedback">Stock errónea!</div>
+                        </div> 
+                       <div class="col-md-12">
+                          <input class="form-control" type="text" name="proveedor-prod" placeholder="Proveedor." required>
+                           <div class="valid-feedback">Proveedor correcta!</div>
+                           <div class="invalid-feedback">Proveedor incorrecta!</div>
+                       </div>
+                        <div class="form-button mt-3">
+                            <button id="submit" type="submit" class="btn btn-success">Registrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 <div class="footer">
     <p class="marca">Desarollado por @DevJs32</p>
     <p class="contactos">Correo: </p>

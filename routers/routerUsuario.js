@@ -5,6 +5,7 @@ const rutaUser=express.Router();
 /* ingreso usuarios*/
 rutaUser.get('/ingresa_user',controladorUsuario.mostrarIngresoUser);
 rutaUser.post('/ingreso_user',controladorUsuario.devolverIndex);
+rutaUser.post('/ingresar_user',controladorUsuario.devolverAdmin);
 /* registro por primera vez */
 rutaUser.get('/registrarse',controladorUsuario.mostrarRegistro);
 rutaUser.post('/registro',controladorUsuario.devolverInicio);

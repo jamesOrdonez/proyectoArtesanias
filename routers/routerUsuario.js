@@ -2,13 +2,12 @@ const express = require('express');
 const controladorUsuario=require('../controllers/controllerUsuario');
 const rutaUser=express.Router();
 
-/* ingreso usuarios*/
-rutaUser.get('/ingresa_user',controladorUsuario.mostrarIngresoUser);
-rutaUser.post('/ingreso_user',controladorUsuario.devolverIndex);
-rutaUser.post('/ingresar_user',controladorUsuario.devolverAdmin);
 /* registro por primera vez */
 rutaUser.get('/registrarse',controladorUsuario.mostrarRegistro);
-rutaUser.post('/registro',controladorUsuario.devolverInicio);
+rutaUser.post('/registro',controladorUsuario.registroUsuario);
+/* ingreso usuarios*/
+rutaUser.get('/ingresa_user',controladorUsuario.mostrarIngresoUser);
+rutaUser.post('/ingresar_user',controladorUsuario.registroUser);
 /* ingreso a la pagina principal despues de registrarse */
 rutaUser.get('/ingresar',controladorUsuario.mostrarIngreso);
 rutaUser.post('/ingreso',controladorUsuario.concederIngreso);

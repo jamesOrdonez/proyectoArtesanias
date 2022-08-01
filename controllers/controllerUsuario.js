@@ -3,22 +3,37 @@ const res=require("express/lib/response")
 
 const controlador={}
 
-/* ingreso usuarios*/
-controlador.mostrarIngresoUser=(req,res)=>{
-    res.render('ingresar_user.ejs');
-}
-controlador.devolverIndex=(req,res)=>{
-    res.render('indexAd.ejs');
-}
-controlador.devolverAdmin=(req,res)=>{
-    res.render('indexAd.ejs');
-}
 /* registro por primera vez */
 controlador.mostrarRegistro=(req,res)=>{
     res.render('registrarse.ejs');
 }
-controlador.devolverInicio=(req,res)=>{
-    res.render('home_page.ejs');
+controlador.registroUsuario=(req,res)=>{
+    let {identificacion_user,nombre_user,telefono_user,direccion_user,password_user}=req.body;
+    let sql = `insert into usuario (pk_identificacion ,nombre_user,telefono_user,tipo_usuario,direccion_user,password)
+                values ('${identificacion_user}','${nombre_user}','${telefono_user}','comprador','${direccion_user}','${password_user}')`;
+                conexion.query(sql,(err,rows)=>{
+                  if(err) {
+                      console.log(err);
+                  }else{
+                      res.redirect('/registrarse');
+                  }
+          });  
+}
+/* ingreso usuarios*/
+controlador.mostrarIngresoUser=(req,res)=>{
+    res.render('ingresar_user.ejs');
+}
+controlador.registroUser=(req,res)=>{
+    let {tipo_user,identificacion_user,nombre_user,telefono_user,direccion_user,password_user}=req.body;
+    let sql = `insert into usuario (pk_identificacion ,nombre_user,telefono_user,tipo_usuario,direccion_user,password)
+                values ('${identificacion_user}','${nombre_user}','${telefono_user}','${tipo_user}','${direccion_user}','${password_user}')`;
+                conexion.query(sql,(err,rows)=>{
+                  if(err) {
+                      console.log(err);
+                  }else{
+                      res.redirect('/ingresa_user');
+                  }
+          });  
 }
 /* ingreso a la pagina principal despues de registrarse */
 controlador.mostrarIngreso=(req,res)=>{

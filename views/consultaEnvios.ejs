@@ -29,16 +29,19 @@
             <th>Destino</th>
             <th>Observacion</th>
         </tr>
-        <% for (let i=0; i<lista.length;i++) { %>
+        <% envio.forEach(envios => {
+            %>
             <tr>
-                <td><%=lista[i].codigo%></td>
-                <td><%=lista[i].estado%></td>
-                <td><%=lista[i].fecha%></td>
-                <td><%=lista[i].destinatario%></td>
-                <td><%=lista[i].destino%></td>
-                <td><%=lista[i].observacion%></td>
+               <td><%=envios.pk_codigo_env %></td>
+               <td><%=envios.estado_env%></td>
+               <td><%=envios.fecha_env%></td>
+               <td><%=envios.destinatario_env%></td>
+               <td><%=envios.destino_env%></td>
+               <td><%=envios.observacion_env%></td>
             </tr>
-            <% } %>
+                <% 
+            });
+             %>
     </table>
 <div class="footer">
     <p class="marca">Desarollado por @DevJs32</p>

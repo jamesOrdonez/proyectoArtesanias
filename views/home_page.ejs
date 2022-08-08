@@ -1,25 +1,400 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link re="icon" href="/img/logo.png">
-	<title>Artesanías las Américas.co</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artesanias las americas.com</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- custom css file link  -->
     <link rel="stylesheet" href="/css/home_page.css">
+
 </head>
 <body>
-    <div class="header"> 
-        <img src="/img/logo.png" class="logo">
-        <h2 class="head">Artesanías las Américas.co</h2>
-        <a class="registro" href="/registrarse">Registro</a>
-        <a class="ingresar" href="/ingresar">Ingresar</a>
+    
+<!-- header section Artesanias   --> 
+
+<header class="header">
+
+    <a href="#" class="logo"> 
+    <nav class="navbar">
+        <div id="nav-close" class="fas fa-times"></div>
+        <a href="/ingresar">Iniciar sesion</a>
+        <a href="/registrarse">Registarse</a>
+        <a href="#packages"></a>
+        <a href="#reviews"></a>
+        <a href="#blogs"></a>
+    </nav>
+
+    <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <a href="#" class="fas fa-shopping-cart"></a>
+        <div id="search-btn" class="fas fa-search"></div>
     </div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- search form  -->
+
+<div class="search-form">
+
+    <div id="close-search" class="fas fa-times"></div>
+
+    <form action="">
+        <input type="search" name="" placeholder="Escribe aqui" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+</div>
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="swiper home-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <div class="box" style="background: url(/img/mochilas.jpg) no-repeat;">
+                    <div class="content">
+                        <span><!-- never stop --></span>
+ 
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="box second" style="background: url(img/esculturas.jpg) no-repeat;">
+                    <div class="content">
+                        <span><!-- make tour --></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- Categoria de artesanias  -->
+
+<section class="category">
+
+    <h1 class="heading">Catálogos</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="/img/estatua2.jpg" alt="">
+            <h3>Piedra</h3>
+           
+        </div>
+
+        <div class="box">
+            <img src="/img/artesania9.jpeg" alt="">
+            <h3>Madera</h3>
+         
+        </div>
+
+        <div class="box">
+            <img src="/img/artesaniabarro.jpg" alt="">
+            <h3>Arcilla</h3>
+     
+        </div>
+
+    </div>
+
+</section>
+
+<!-- category section ends -->
+
+<!-- Artesanias  -->
+
+<section class="about" id="about">
+
+    <div class="image">
+        <img src="/img/artesana.jpg" alt="">
+    </div>
+
     <div class="content">
-        <img src="/img/artesana.jpg" class="img-principal">
+        <h3>A cerca de nosotros</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque voluptates corrupti natus necessitatibus beatae voluptatibus, deserunt quo soluta minima libero laborum, corporis error esse vitae placeat blanditiis reiciendis vel? Minima.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dicta doloremque placeat porro, ipsam quia at beatae atque odit iste?</p>
     </div>
-    <div class="footer">
-        <p class="marca">Desarollado por @DevJs32</p>
-        <p class="contactos">Correo: </p>
-        <p class="correo"> Artesanias_Americas@gmail.com</p>
-        <p class="telefono"> WhatsApp: 3223562765</p>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- Productos destacados  -->
+
+<section class="shop" id="shop">
+
+    <h1 class="heading">Productos destacados</h1>
+
+    <div class="swiper product-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide">
+                <div class="image">
+                    <img src="/img/product-1.jpg" alt="">
+              <!--       <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div> -->
+                </div>
+                <div class="content">
+                    <h3>Artesanias</h3>
+                    <div class="price"> $15.000 </div>
+
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="image">
+                    <img src="/img/product-2.jpg" alt="">
+                <!--     <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div> -->
+                </div>
+                <div class="content">
+                    <h3>Artesanias</h3>
+                    <div class="price"> $15.000</div>
+       <!--              <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="image">
+                    <img src="/img/product-3.jpg" alt="">
+<!--                     <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div> -->
+                </div>
+                <div class="content">
+                    <h3>Artesanias</h3>
+                    <div class="price"> $15.000</div>
+<!--                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="image">
+                    <img src="/img/product-4.jpg" alt="">
+<!--                     <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div> -->
+                </div>
+                <div class="content">
+                    <h3>Artesanias</h3>
+                    <div class="price"> $15.000 </div>
+<!--                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="image">
+                    <img src="/img/product-5.jpg" alt="">
+<!--                     <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div> -->
+                </div>
+                <div class="content">
+                    <h3>Artesanias</h3>
+                    <div class="price"> $15.000 </div>
+<!--                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="image">
+                    <img src="/img/product-6.jpg" alt="">
+  <!--                   <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div> -->
+                </div>
+                <div class="content">
+                    <h3>Artesanias  </h3>
+                    <div class="price"> $15.000</div>
+<!--                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
     </div>
+
+</section>
+
+<!-- shop section ends -->
+
+<!--Artesanias Populares  -->
+
+<section class="packages" id="packages">
+
+    <h1 class="heading">Artesanias Populares</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="/img/img-1.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Artesanias</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, eos.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="/img/img-2.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Artesanias</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, eos.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="/img/img-3.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Artesanias</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, eos.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="/img/img-4.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Artesanias</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, eos.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="/img/img-5.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Artesanias</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, eos.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="/img/img-6.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Artesanias</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, eos.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+</section> 
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Contactanos</h3>
+            <a href="#"> <i class="fas fa-phone"></i> 3223562765 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> artesaniasAmericas@gmail.com </a>
+            <a href="#"> <i class="fas fa-map"></i> Colombia, San Agustín-huila</a>
+        </div>
+
+        <div class="box">
+            <h3>Tambien nos puedes encontrar</h3>
+            <a href="#"> <i class="fab fa-facebook-f"></i> Artesanías_Américas </a>
+            <a href="#"> <i class="fab fa-twitter"></i> Artesanías_Américas </a>
+            <a href="#"> <i class="fab fa-instagram"></i> @Artesanías_Américas </a>
+            <a href="#"> <i class="fab fa-github"></i> Proyecto-artesanías </a>
+        </div>
+
+    </div>
+
+    <div class="credit"><span>Artesanias</span> | las americas</div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="/js/script.js"></script>
+
 </body>
 </html>

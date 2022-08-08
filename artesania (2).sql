@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-07-2022 a las 23:48:46
+-- Tiempo de generación: 05-08-2022 a las 01:06:40
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -39,7 +39,11 @@ CREATE TABLE `catalogo` (
 INSERT INTO `catalogo` (`pk_id_catalogo`, `nombre_catalogo`) VALUES
 (1, 'arcilla'),
 (2, 'madera'),
-(3, 'piedra');
+(3, 'piedra'),
+(5, 'undefined'),
+(6, 'guadua'),
+(7, 'guadua'),
+(8, 'guadua');
 
 -- --------------------------------------------------------
 
@@ -95,7 +99,7 @@ INSERT INTO `detalle_compra` (`pk_id_detalle`, `cantidad`, `precio_unitario`, `t
 
 CREATE TABLE `envio` (
   `pk_codigo_env` int(11) NOT NULL,
-  `estado_env` enum('sin realizar','en proceso','enviado','') COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `estado_env` varchar(150) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `fecha_env` date NOT NULL,
   `destinatario_env` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `destino_env` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL,
@@ -135,8 +139,8 @@ CREATE TABLE `producto` (
   `desc_pdto` varchar(250) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `valor_pdto` decimal(10,2) NOT NULL,
   `stock` int(11) NOT NULL,
-  `estado` enum('disponible','separado','agotado','') COLLATE utf8mb4_spanish2_ci NOT NULL,
-  `proveedor` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `estado` varchar(150) COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `proveedor` varchar(100) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `fk_catalogo` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
 
@@ -145,12 +149,27 @@ CREATE TABLE `producto` (
 --
 
 INSERT INTO `producto` (`pk_codigo_pdto`, `nombre_pdto`, `imagen`, `desc_pdto`, `valor_pdto`, `stock`, `estado`, `proveedor`, `fk_catalogo`) VALUES
-(1, 'Olla', '', 'olla de barro grande medidas 160x80cm.', '120000.00', 12, 'disponible', 'Juliana Gomez', 1),
-(2, 'vagilla', '', 'vagilla compuesta por dos platos grandes, dos platos pequeños y dos posillos.', '450000.00', 8, 'disponible', 'Juliana Gomez', 1),
-(3, 'escultura propia de san agustin', '', 'escultura llamada doble yo, propia de la cultur ancestral de san agustin', '800000.00', 12, 'disponible', 'Juliana Gomez', 1),
-(4, 'porcelana ', '', 'porcelana delgada por 14 unidades medidas 120x80cm.', '120000.00', 80, 'disponible', 'Juliana Gomez', 1),
-(5, 'chaman', '', 'chaman propio de la cultura antigua agustiniana ', '60000.00', 8, 'disponible', 'Juan Velez', 3),
-(7, 'mesa', '', 'mesa de roble medidas 120x80cm.', '850000.00', 15, 'disponible', 'Roberto Gomez', 2);
+(1, 'Olla', '', 'olla de barro grande medidas 160x80cm.', '120000.00', 12, 'disponible', '0', 1),
+(2, 'vagilla', '', 'vagilla compuesta por dos platos grandes, dos platos pequeños y dos posillos.', '450000.00', 8, 'disponible', '0', 1),
+(3, 'escultura propia de san agustin', '', 'escultura llamada doble yo, propia de la cultur ancestral de san agustin', '800000.00', 12, 'disponible', '0', 1),
+(4, 'porcelana ', '', 'porcelana delgada por 14 unidades medidas 120x80cm.', '120000.00', 80, 'disponible', '0', 1),
+(5, 'chaman', '', 'chaman propio de la cultura antigua agustiniana ', '60000.00', 8, 'disponible', '0', 3),
+(7, 'mesa', '', 'mesa de roble medidas 120x80cm.', '850000.00', 15, 'disponible', '0', 2),
+(8, 'Posavasos', '', 'posavasos de madera medidas 80x20 cm.', '165000.00', 20, 'disponible', '0', 2),
+(9, 'Posavasos', '', 'posavasos de madera medidas 80x20 cm.', '165000.00', 20, 'disponible', '0', 2),
+(10, 'Silla', '', 'silla medidas 20x601212', '120000.00', 65, 'disponible', '0', 2),
+(11, 'Posavasos', '', 'posavasos de madera medidas 80x20 cm.', '8044051.00', 511, 'disponible', '0', 2),
+(12, 'Silla', '', 'silla medidas 20x601212', '512156.00', 546516, 'disponible', '0', 2),
+(13, 'Silla', '', 'silla medidas 20x601212', '512156.00', 546516, 'disponible', '0', 2),
+(14, 'estatua', '', 'estatua san agustin', '589000.00', 23, 'disponible', '0', 2),
+(15, 'estatua', '', 'estatua san agustin', '589000.00', 23, 'disponible', '0', 2),
+(18, 'mesa', '', 'mesa medidas 120x60cm', '135000.00', 12, 'disponible', '1', 2),
+(19, 'mesa', '', 'mesa medidas 120x60cm', '135000.00', 12, 'disponible', 'Juan', 2),
+(20, 'mesa', '', 'mesa medidas 120x60cm', '135000.00', 12, 'disponible', 'Juan', 2),
+(21, 'mesa', '', 'mesa medidas 120x60cm', '1552151.00', 2, 'disponible', 'Juan', 2),
+(22, 'silla', '', 'silla x 4 unidades', '131541.00', 5, 'disponible', 'Juan Vasques', 2),
+(23, 'pulsera', '', 'negro', '10000.00', 50, 'disponible', 'Juan Vasques', 2),
+(24, 'puerta', '', 'medidas 120x30 de roble ', '300000.00', 12, 'disponible', 'Juan Vasques', 2);
 
 -- --------------------------------------------------------
 
@@ -177,7 +196,7 @@ CREATE TABLE `usuario` (
   `pk_identificacion` int(11) NOT NULL,
   `nombre_user` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `telefono_user` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL,
-  `tipo_usuario` enum('artesano','comprador','administrador','') COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `tipo_usuario` enum('comprador','artesano','administrador','') COLLATE utf8mb4_spanish2_ci NOT NULL,
   `direccion_user` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `password` varchar(60) COLLATE utf8mb4_spanish2_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
@@ -187,7 +206,11 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`pk_identificacion`, `nombre_user`, `telefono_user`, `tipo_usuario`, `direccion_user`, `password`) VALUES
+(4, '2752', 'l,jhk', 'comprador', 'hjkmh', 'gh'),
+(5874, 'Rolando perez', '3257896535', 'administrador', 'isnos', '1234'),
 (45263, 'Juan Stiven Anacona', '3504879865', 'artesano', 'San Agustin calle 3 #34-17 barrio San Jose', 'ana1235'),
+(65156, 'Pepito perez', '3259874562', 'comprador', 'san agustin', 'tyhnbr'),
+(10536897, 'Luisa', '896527852', 'comprador', 'Pitalito', '10223'),
 (1083865778, 'maria suaza', '3208753785', 'comprador', 'acevedo', '45mary'),
 (1083865788, ' James Santiago', '3223562765', 'administrador', 'san agustin', '24santiago'),
 (2147483647, 'juan perez', '3179857346', 'artesano', 'san agustin', '3tfrsc');
@@ -228,14 +251,19 @@ ALTER TABLE `envio`
 -- Indices de la tabla `personalizacion`
 --
 ALTER TABLE `personalizacion`
-  ADD PRIMARY KEY (`id_personalizacion`);
+  ADD PRIMARY KEY (`id_personalizacion`),
+  ADD KEY `conlleva` (`fk_producto`);
 
 --
 -- Indices de la tabla `producto`
 --
 ALTER TABLE `producto`
   ADD PRIMARY KEY (`pk_codigo_pdto`),
-  ADD KEY `fk_catalogo` (`fk_catalogo`);
+  ADD KEY `fk_catalogo` (`fk_catalogo`),
+  ADD KEY `fk_proveedor` (`proveedor`),
+  ADD KEY `fk_proveedor_2` (`proveedor`),
+  ADD KEY `fk_proveedor_3` (`proveedor`),
+  ADD KEY `fk_proveedor_4` (`proveedor`);
 
 --
 -- Indices de la tabla `separado`
@@ -258,7 +286,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `catalogo`
 --
 ALTER TABLE `catalogo`
-  MODIFY `pk_id_catalogo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `pk_id_catalogo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `compra`
@@ -288,7 +316,7 @@ ALTER TABLE `personalizacion`
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `pk_codigo_pdto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `pk_codigo_pdto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT de la tabla `separado`
@@ -313,6 +341,12 @@ ALTER TABLE `compra`
 ALTER TABLE `detalle_compra`
   ADD CONSTRAINT `genera` FOREIGN KEY (`fk_pdto`) REFERENCES `producto` (`pk_codigo_pdto`),
   ADD CONSTRAINT `realiza` FOREIGN KEY (`fk_compra`) REFERENCES `compra` (`pk_codigo_compra`);
+
+--
+-- Filtros para la tabla `personalizacion`
+--
+ALTER TABLE `personalizacion`
+  ADD CONSTRAINT `conlleva` FOREIGN KEY (`fk_producto`) REFERENCES `producto` (`pk_codigo_pdto`);
 
 --
 -- Filtros para la tabla `producto`

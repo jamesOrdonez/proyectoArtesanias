@@ -3,10 +3,8 @@ const controladorProducto=require('../controllers/controllerProducto');
 const rutaProducto=express.Router();
 
 /* ingreso de productos al catálogo */
-rutaProducto.get('/ingresa_prod',controladorProducto.consultaCatalogos);
-rutaProducto.get('/ingresar_catalogoMadera',controladorProducto.ingresoProdMadera);
-rutaProducto.get('/ingresar_catalogoArcilla',controladorProducto.ingresoProdArcilla);
-rutaProducto.get('/ingresar_catalogoPiedra',controladorProducto.ingresoProdPiedra);
+rutaProducto.get('/ingresar_catalogo',controladorProducto.ingresoProd);
+rutaProducto.post('/registrarProducto',controladorProducto.registrarProducto);
 rutaProducto.post('/ingreso_prod',controladorProducto.devolverInicio);
 /* consulta de catalogos con productos registrados */
 rutaProducto.get('/consulta_prod',controladorProducto.mostrarRegistroProd);

@@ -16,40 +16,25 @@
                         <div class="form-items">
                             <h3>Registro de usuarios</h3>
                             <form class="requires-validation" method="post" action="/registro">
-                                <div class="col-md-12">
-                                    <select class="form-select mt-3" required>
-                                          <option selected disabled value="">Tipo de usuario</option>
-                                          <option value="jweb"> Administrador </option>
-                                          <option value="sweb"> Artesano </option>
-                                          <option value="pmanager"> Comprador </option>
-                                   </select>
-                                    <div class="valid-feedback">Rol seleccionado correctamente!</div>
-                                    <div class="invalid-feedback">Por favor, seleccione un rol!</div>
-                               </div><br>
                                <div class="col-md-12">
-                                <input class="form-control" type="number" name="name" placeholder=" Numero de identificacion ." required>
-                                <div class="valid-feedback">Su numero de identificacion es válido!</div>
-                                <div class="invalid-feedback">Su numero de identificacion es inválido!</div>
+                                <input class="form-control" type="number" name="identificacion_user" placeholder=" Numero de identificacion ." required>
+                                <div class="invalid-feedback">Por favor ingrese un número de identificacion!</div>
                              </div>
                                 <div class="col-md-12">
-                                   <input class="form-control" type="text" name="name" placeholder=" Nombre completo." required>
-                                   <div class="valid-feedback">Su nombre es válido!!</div>
-                                   <div class="invalid-feedback">Nombre inválido!</div>
+                                   <input class="form-control" type="text" name="nombre_user" placeholder=" Nombre completo." required>
+                                   <div class="invalid-feedback">Por favor ingrese un nombre!</div>
                                 </div>
                                 <div class="col-md-12">
-                                    <input class="form-control" type="text" name="name" placeholder="Telefono " required>
-                                    <div class="valid-feedback">Telefono correcto!</div>
-                                    <div class="invalid-feedback">Telefono erróneo!</div>
+                                    <input class="form-control" type="text" name="telefono_user" placeholder="Telefono " required>
+                                    <div class="invalid-feedback">Por favor ingrese un número de teléfono!</div>
                                  </div>   
                                 <div class="col-md-12">
-                                    <input class="form-control" type="text" name="text" placeholder="Direccion. " required>
-                                     <div class="valid-feedback">Direccion correcta!</div>
-                                     <div class="invalid-feedback">Direccion errónea!</div>
+                                    <input class="form-control" type="text" name="direccion_user" placeholder="Direccion. " required>
+                                    <div class="invalid-feedback">Por favor ingrese una dirrecion!</div>
                                 </div> 
                                <div class="col-md-12">
-                                  <input class="form-control" type="password" name="password" placeholder="Contraseña." required>
-                                   <div class="valid-feedback">Contraseña correcta!</div>
-                                   <div class="invalid-feedback">Contraseña incorrecta!</div>
+                                  <input class="form-control" type="password" name="password_user" placeholder="Contraseña." required>
+                                  <div class="invalid-feedback">Por favor, ingrese una contraseña!</div>
                                </div>
                             <div class="form-check">
                               <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>

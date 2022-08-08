@@ -92,6 +92,7 @@ html, body {
 
 .form-content .form-items {
     border: 3px solid #fff;
+    color: black;
     padding: 40px;
     display: inline-block;
     width: 100%;
@@ -141,7 +142,7 @@ html, body {
     background-color: #fff;
     font-size: 15px;
     font-weight: 300;
-    color: #8D8D8D;
+    color: black;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     margin-top: 16px;

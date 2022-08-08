@@ -4,11 +4,20 @@ const conexion = require('../database/conexion');
 const controlador={}
 
 /* ingreso de productos al catálogo */
-controlador.consultaCatalogos=(req,res)=>{
-    res.render('catalogo_productos.ejs');
+controlador.ingresoProd=(req,res)=>{
+    res.render('ingresar_productos.ejs');
 }
-controlador.ingresoProdMadera=(req,res)=>{
-    res.render('ingresar_productos_madera.ejs');
+controlador.registrarProducto=(req,res)=>{
+  let {nombre_prod,desc_prod,valor_prod,stock_prod,proveedor_prod,catalogo_prod}=req.body;
+  let sql = `insert into producto (nombre_pdto,desc_pdto,valor_pdto,stock,proveedor,fk_catalogo)
+              values ('${nombre_prod}','${desc_prod}','${valor_prod}',${stock_prod},'${proveedor_prod}',${catalogo_prod})`;
+              conexion.query(sql,(err,rows)=>{
+                if(err) {
+                    console.log(err);
+                }else{
+                    res.redirect('/ingresar_catalogo');
+                }
+        });  
 }
 controlador.ingresoProdArcilla=(req,res)=>{
     res.render('ingresar_productos_arcilla.ejs');
@@ -21,6 +30,7 @@ controlador.devolverInicio=(req,res)=>{
 }
 /* consulta de catalogos con productos registrados */
 controlador.mostrarRegistroProd=(req,res)=>{
+  let sql=`select * from catalogo`;
     res.render('consultar_prod.ejs');
 };
 
@@ -128,11 +138,12 @@ controlador.mostrarEliminar=(req,res)=>{
     res.render('eliminarProducto.ejs');
 }
 controlador.preguntaEliminar=(req,res)=>{
-    res.render('consultar_prod.ejs');
+    res.redirect('consultar_prod.ejs');
 }
 controlador.devolverInicio3=(req,res)=>{
-    res.render('consultar_prod.ejs');
+    res.redirect('consultar_prod.ejs');
 }
+//separar producto
 controlador.separarProducto=(req,res)=>{
     res.render('separar_prod.ejs')
 }

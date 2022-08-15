@@ -3,8 +3,8 @@ const controladorUsuario=require('../controllers/controllerUsuario');
 const rutaUser=express.Router();
 
 /* registro por primera vez */
-rutaUser.get('/registrarse',controladorUsuario.mostrarRegistro);
-rutaUser.post('/registro',controladorUsuario.registroUsuario);
+rutaUser.get('/frmRegistroUser',controladorUsuario.frmRegistroUser);
+rutaUser.post('/registroUser',controladorUsuario.registrarUser);
 /* ingreso usuarios*/
 rutaUser.get('/ingresa_user',controladorUsuario.mostrarIngresoUser);
 rutaUser.post('/ingresar_user',controladorUsuario.registroUser);

@@ -4,19 +4,16 @@ const res=require("express/lib/response")
 const controlador={}
 
 /* registro por primera vez */
-controlador.mostrarRegistro=(req,res)=>{
+controlador.frmRegistroUser=(req,res)=>{
     res.render('registrarse.ejs');
 }
-controlador.registroUsuario=(req,res)=>{
+controlador.registrarUser=(req,res)=>{
     let {identificacion_user,nombre_user,telefono_user,direccion_user,password_user}=req.body;
     let sql = `insert into usuario (pk_identificacion ,nombre_user,telefono_user,tipo_usuario,direccion_user,password)
                 values ('${identificacion_user}','${nombre_user}','${telefono_user}','comprador','${direccion_user}','${password_user}')`;
-                conexion.query(sql,(err,rows)=>{
-                  if(err) {
-                      console.log(err);
-                  }else{
-                      res.redirect('/registrarse');
-                  }
+                conexion.query(sql,(err,datos)=>{
+                  if(!err) res.send('Se registró con éxito el usuario');
+                  else res.send("No se registro "+error);
           });  
 }
 /* ingreso usuarios*/

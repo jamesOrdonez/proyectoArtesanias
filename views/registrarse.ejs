@@ -15,25 +15,25 @@
                     <div class="form-content">
                         <div class="form-items">
                             <h3>Registro de usuarios</h3>
-                            <form class="requires-validation" method="post" action="/registro">
+                            <form class="requires-validation" method="post" action="/registroUser">
                                <div class="col-md-12">
-                                <input class="form-control" type="number" name="identificacion_user" placeholder=" Numero de identificacion ." required>
+                                <input class="form-control" type="number" name="identificacion_user" placeholder=" Numero de identificacion ." id="identificacion"required>
                                 <div class="invalid-feedback">Por favor ingrese un número de identificacion!</div>
                              </div>
                                 <div class="col-md-12">
-                                   <input class="form-control" type="text" name="nombre_user" placeholder=" Nombre completo." required>
+                                   <input class="form-control" type="text" name="nombre_user" placeholder=" Nombre completo." id="nombre" required>
                                    <div class="invalid-feedback">Por favor ingrese un nombre!</div>
                                 </div>
                                 <div class="col-md-12">
-                                    <input class="form-control" type="text" name="telefono_user" placeholder="Telefono " required>
+                                    <input class="form-control" type="text" name="telefono_user" placeholder="Telefono" id="telefono" required>
                                     <div class="invalid-feedback">Por favor ingrese un número de teléfono!</div>
                                  </div>   
                                 <div class="col-md-12">
-                                    <input class="form-control" type="text" name="direccion_user" placeholder="Direccion. " required>
+                                    <input class="form-control" type="text" name="direccion_user" placeholder="Direccion. " id="direccion" required>
                                     <div class="invalid-feedback">Por favor ingrese una dirrecion!</div>
                                 </div> 
                                <div class="col-md-12">
-                                  <input class="form-control" type="password" name="password_user" placeholder="Contraseña." required>
+                                  <input class="form-control" type="password" name="password_user" placeholder="Contraseña." id="password" required>
                                   <div class="invalid-feedback">Por favor, ingrese una contraseña!</div>
                                </div>
                             <div class="form-check">
@@ -41,10 +41,8 @@
                               <label class="form-check-label">Confirmo que mis datos son correctos.</label>
                              <div class="invalid-feedback">por favor, confirme que sus datos son correctos!</div>
                             </div>
-                      
-    
                                 <div class="form-button mt-3">
-                                    <button id="submit" type="submit" class="btn btn-primary">Registrar</button>
+                                    <button id="submit" type="submit" class="btn btn-success" onclick="javascript:registrarUsuario();">Registrar</button>
                                 </div>
                             </form>
                         </div>
@@ -52,12 +50,35 @@
                 </div>
             </div>
         </div>
-    <div class="footer">
-        <p class="marca">Desarollado por @DevJs32</p>
-        <p class="contactos">Correo: </p>
-        <p class="correo"> Artesanias_Americas@gmail.com</p>
-        <p class="telefono"> WhatsApp: 3223562765</p>
-    </div>
-    <script src="/js/registro.js"></script>
 </body>
+<script>
+    function registrarUsuario(){
+        let datos = new URLSearchParams();
+        datos.append('identificacion_user',document.getElementById("identificacion").value);
+        datos.append('nombre_user',document.getElementById("nombre").value);
+        datos.append('telefono_user',document.getElementById("telefono").value);
+        datos.append('direccion_user',document.getElementById("direccion").value);
+        datos.append('password_user',document.getElementById("password").value);
+        fetch('/registroUser',
+        {   method: 'POST',
+            body:datos
+        }
+        ).then(res=>res.text())
+        .then(data=>{
+            ingresarUsuario();
+            Swal.fire({
+              position: 'center',
+              icon: 'success',
+              title: data,
+              showConfirmButton: false,
+              timer: 1500
+            });
+        })
+        function ingresarUsuario() {
+            let datos = new URLSearchParams();
+
+        }
+    }
+</script>
 </html>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

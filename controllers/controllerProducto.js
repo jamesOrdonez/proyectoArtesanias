@@ -3,6 +3,22 @@ const conexion = require('../database/conexion');
 
 const controlador={}
 
+controlador.listarProducto=(req,res)=>{
+  let sql=`select * from producto`;
+  conexion.query(sql,(error,datos)=>{
+    if(!error) res.json(datos);
+    else console.log('Error al listar usuarios');
+  })
+  let sql2=`select pk_identificacion, nombre_user from usuario`;
+  conexion.query(sql2,(error2,datos2)=>{
+    if(!error2) {res.render('indexAd.ejs',{lista:datos2});}
+    else {res.send("error al consultar usuarios" +error2);}
+  })
+}
+
+
+
+
 /* ingreso de productos al catálogo */
 controlador.ingresoProd=(req,res)=>{
     res.render('ingresar_productos.ejs');

@@ -2,6 +2,11 @@ const express = require('express');
 const controladorProducto=require('../controllers/controllerProducto');
 const rutaProducto=express.Router();
 
+rutaProducto.get('/listarProducto',controladorProducto.listarProducto);
+
+
+
+
 /* ingreso de productos al catálogo */
 rutaProducto.get('/ingresar_catalogo',controladorProducto.ingresoProd);
 rutaProducto.post('/registrarProducto',controladorProducto.registrarProducto);

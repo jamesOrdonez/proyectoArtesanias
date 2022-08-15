@@ -25,7 +25,7 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-track {
-  background: #fff;
+  background: rgb(59,59, 59);
 }
 
 html::-webkit-scrollbar-thumb {
@@ -60,7 +60,7 @@ section {
 }
 
 .header {
-    background-color: white;
+    background-color: rgb(59,59, 59);
   position: fixed;
   top: 0;
   left: 0;
@@ -76,7 +76,7 @@ section {
 }
 
 .header.active {
-  background: #fff;
+  background: rgb(59,59, 59);
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
@@ -95,7 +95,7 @@ section {
 .header .navbar a {
   margin-left: 2rem;
   font-size: 1.7rem;
-  color: #10221b;
+  color: green;
 }
 
 .header .navbar a:hover {
@@ -105,7 +105,7 @@ section {
 .header .navbar #nav-close {
   font-size: 5rem;
   cursor: pointer;
-  color: #10221b;
+  color: green;
   display: none;
 }
 
@@ -114,7 +114,7 @@ section {
   font-size: 2.5rem;
   margin-left: 2rem;
   cursor: pointer;
-  color: #221010;
+  color: green;
 }
 
 .header .icons a:hover,
@@ -132,7 +132,7 @@ section {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgb(59,59, 59);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,7 +157,7 @@ section {
   top: 1.5rem;
   right: 2.5rem;
   cursor: pointer;
-  color: #fff;
+  color: rgb(59,59, 59);
   font-size: 6rem;
 }
 
@@ -708,8 +708,7 @@ section {
 }
 
 .footer {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../images/footer-bg.jpg) no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/footer-bg.jpg) no-repeat;
+  background-color: rgb(59,59, 59) ;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -721,28 +720,29 @@ section {
   -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1.5rem;
+  color: black;
 }
 
 .footer .box-container .box h3 {
   font-size: 2rem;
   padding: 1.5rem 0;
-  color: #fff;
+  color: white;
 }
 
 .footer .box-container .box a {
   display: block;
   font-size: 1.4rem;
-  color: #fff;
+  color: white;
   padding: 1rem 0;
 }
 
 .footer .box-container .box a i {
-  color: #219150;
+  color: white;
   padding-right: .5rem;
 }
 
 .footer .box-container .box a:hover {
-  color: white;
+  color: green;
 }
 
 .footer .box-container .box a:hover i {
@@ -755,11 +755,11 @@ section {
   padding: 1rem;
   padding-top: 2.5rem;
   font-size: 2rem;
-  color: #fff;
+  color: black;
 }
 
 .footer .credit span {
-  color: #219150;
+  color: black;
 }
 
 @media (max-width: 1200px) {

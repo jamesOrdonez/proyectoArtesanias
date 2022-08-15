@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/indexAd.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/'-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="styles.css">
     <title>Inicio administrador</title>
 </head>
 <body>
@@ -16,8 +15,22 @@
         <img src="/img/check.png" class="user">
         <h2 class="texto">Inicio administrador</h2>
     </div>
-    <br>
+<!--     <br>
     <div class="main-content">
+      <button type="button" class="btn btn-success" onclick="javascript:mostrarProductos();">Productos</button>
+      <button type="button" class="btn btn-success">Usuarios</button>
+      <button type="button" class="btn btn-success">Compras</button>
+      <button type="button" class="btn btn-success">Envios</button><br><br><br>
+      <div class=" row">
+        <div class="col-9">
+            <table id="tabla" class="table table-striped">
+            
+            </table>
+        </div>
+        <div class="col-3">
+          <div id="frm"></div>
+        </div>
+    </div> -->
         <header class="main-header">
             <nav id="nav" class="main-nav">
               <div class="nav-links">
@@ -38,14 +51,69 @@
               <span></span>
               <span></span>
             </button>
-          </header><br>
+          </header><br> 
 </div>
-    <div class="footer">
-        <p class="marca">Desarollado por @DevJs32</p>
-        <p class="contactos">Correo: </p>
-        <p class="correo"> Artesanias_Americas@gmail.com</p>
-        <p class="telefono"> WhatsApp: 3223562765</p>
-    </div>
-    <script src="/js/script.js"></script>
+<!--     <script>
+      function mostrarProductos(){
+        fetch('/listarProducto',
+        {method: 'GET'}
+        ).then(res=>res.json())
+        .then(data=>{
+          let filas='';
+            filas+=`<h2>Lista de productos</h2>`;
+            filas+=`<tr><th>Codigo</th>`, 
+            filas+=`<th>Nombre</th>`,
+            filas+=`<th>Descripcion</th>`,
+            filas+=`<th>Valor</th>`,
+            filas+=`<th>Stock</th>`,
+            filas+=`<th>Estado</th>`,
+            filas+=`<th>Proveedor</th>`,
+            filas+=`<th>Catalogo</th>`,
+            filas+=`<th>Administrar</th></tr>`
+          for(let i=0; i<data.length; i++) {
+            filas+=`<tr><td>${data[i].pk_codigo_pdto}</td>`,
+            filas+=`<td>${data[i].nombre_pdto}</td>`,
+            filas+=`<td>${data[i].desc_pdto}</td>`,
+            filas+=`<td>${data[i].valor_pdto}</td>`,
+            filas+=`<td>${data[i].stock}</td>`,
+            filas+=`<td>${data[i].estado}</td>`,
+            filas+=`<td>${data[i].proveedor}</td>`,  
+            filas+=`<td>${data[i].fk_catalogo}</td>`,
+            filas+=`<td><a href="javascript:eliminarProducto(${data[i].pk_codigo_pdto});">Eliminar</a><br>`,
+            filas+=`<a href="javascript:actualizarProducto(${data[i].pk_codigo_pdto});">Actualizar</a></td>`
+            filas+=`</tr>`; 
+          }
+          let campos='';
+            campos+=`<h2>Ingresar producto</h2><br>`
+            campos+=`<div class="form-group">`,
+            campos+=`<label for="formGroupExampleInput">Nombre</label>`,
+            campos+=`<input type="text" class="form-control" id="nombre" placeholder="Digite el nombre "></div>`,
+            campos+=` <div class="form-group">`,
+            campos+=` <label for="formGroupExampleInput">Descripcion</label>`,
+            campos+=`<input type="text" class="form-control" id="descripcion" placeholder="Digite la descripcion"></div>`,
+            campos+=`<div class="form-group">`,
+            campos+=` <label for="formGroupExampleInput">Valor</label>`,
+            campos+=`<input type="number" class="form-control" id="valor" placeholder="Digite el valor"></div>`, 
+            campos+=`<div class="form-group">`,
+            campos+=` <label for="formGroupExampleInput">Stock</label>`,
+            campos+=`<input type="number" class="form-control" id="stock" placeholder="Digite el stock"></div>`,
+            campos+=`<div class="form-group">`,
+            campos+=` <label for="formGroupExampleInput">Proveedor</label>`,
+            campos+=`<td><select class="form-control form-control-lg" id="proveedor">`,
+            campos+=`<option>seleccione un proveedor</option>`,
+            campos+=`<option value="5874">Pepito perez<option></select></td></div><br>`,
+            campos+=`<div class="form-group">`,
+            campos+=`<td><select class="form-control form-control-lg" id="catalogo">`, 
+            campos+=`<option>seleccione un catalogo</option>`,
+            campos+=`<option value="2">madera<option></select></td></div>`,
+          document.getElementById('tabla').innerHTML=filas;
+          document.getElementById('frm').innerHTML=campos;
+        });
+      }
+      function ingresarProducto() {
+        let datos = new URLSearchParams();
+        datos.append();
+      }
+    </script> -->
 </body>
 </html>

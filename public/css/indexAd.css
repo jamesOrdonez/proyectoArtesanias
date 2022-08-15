@@ -33,8 +33,32 @@
     font-weight: 700;
     color: rgb(245, 209, 125);
 }
-
-
+h2 {
+  color: white;
+  text-align: center;
+}
+table {
+  background-color: gray;
+  border-radius: 10px;
+  margin: 5px;
+}
+th {
+  background-color: green;
+  color: white;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+label {
+  color: white;
+}
+input{
+  background-color: gray;
+}
+.btn-success {
+  padding: 5px;
+}
 header{
 	margin: auto;
     background-color: whitesmoke;
@@ -49,9 +73,7 @@ body {
     font-family: helvetica;
 }
 .main-content {
-    background-image: url('../img/artesania18.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
+
     width: 100%;
     height: 560px;
     background-color: rgb(59,59,59);
